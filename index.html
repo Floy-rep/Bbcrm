@@ -4,54 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet"> 
     <title>bbcrm</title>
 </head>
 <body>
     <main>
         <div class="header-wrapper">
-            <header>
+            <div class="header">
                 <div class="header__logo">
                     <img src="img/logo.png" alt="">
-                    <!-- <div class="logo__wrapper">
-                        <img src="img/logo/1.png" alt="">
-                        <img src="img/logo/1.png" alt="">
-                        <img src="img/logo/2.png" alt="">
-                        <img src="img/logo/3.png" alt="">
-                        <img src="img/logo/4.png" alt="">
-                        <img src="img/logo/5.png" alt="">
-                        <img src="img/logo/6.png" alt="">
-                        <img src="img/logo/7.png" alt="">
-                        <img src="img/logo/8.png" alt="">
-                    </div> -->
                 </div>
-                <div class="header__links">
-                    <a href="" class="header__link">О ПРОГРАММЕ</a>
-                    <a href="" class="header__link">ВОЗМОЖНОСТИ</a>
-                    <a href="" class="header__link">ТАРИФЫ</a>
+                <div class="links">
+                    <a href="" class="links__link">О ПРОГРАММЕ</a>
+                    <a href="" class="links__link">ВОЗМОЖНОСТИ</a>
+                    <a href="" class="links__link">ТАРИФЫ</a>
                 </div>
                 <div class="header__about">
-                    <a class="content__item header__about-tel" href="tel:88005002138">8 800 500-21-38</a>
-                    <button class="content__item header__about-button">РЕГИСТРАЦИЯ</button>
-                    <a class="content__item header__about-join" href="">ВОЙТИ</a>
+                    <a class="header__item header__about-tel" href="tel:88005002138">8 800 500-21-38</a>
+                    <button class="header__item header__about-button">РЕГИСТРАЦИЯ</button>
+                    <a class="header__item header__about-join" href="">ВОЙТИ</a>
                 </div>
 
                 <div class="header__content"> 
-                    <h1 class="content__title">Программа <br>
-                        для автомагазинов</h1>
-                    <p class="content__subtitle">Помогает вести учет склада, увеличивает <br> продажи, экономит деньги и время</p>
-                    <button class="content__button">
+                    <h1 class="header__title">Программа <br> для автомагазинов</h1>
+                    <p class="header__subtitle">Помогает вести учет склада, увеличивает <br> продажи, экономит деньги и время</p>
+                    <button class="header__button">
                         <span>ПОЛУЧИТЬ БЕСПЛАТНО</span>    
                     </button>
                 </div>
                 
                 <div class="header__img">
                     <img src="img/box.png" alt="NOT FOUND">
-                    <div class="box-shadow">
+                    <div class="header__shadow">
                         <img  src="img/box-shadow.png" alt="">
                     </div>
                 </div>
-            </header>
+            </div>
         </div>
+
         <div class="whatisit-wrapper">
             <div class="whatisit">
                 <div class="whatisit__img">
@@ -65,120 +56,123 @@
                     </p>
                 </div>
                 <div class="whatisit__help">
-                    <p class="help__text">
+                    <p class="whatisit__text">
                         Проверьте, подходит ли вам BBcrm — <span> получите 14 дней и помощь специалиста бесплатно </span>
                     </p>
                 </div> 
             </div>
         </div>
+
         <div class="abilities-wrapper">
             <div class="alilities">
                 <h2>Возможности BBcrm</h2>
-                <div class="abilities__item">
+                <div class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="">
                         <span class="item__number"> 1 </span>
                     </div>
-                    <div class="items">
+                    <div class="item__row">
                         <h5 class="item__title">Ведение склада</h5>
                          <p class="item__subtitle">Полноценный складской учет, контроль остатков, оформление поступлений и возвратов, составление заявок поставщикам. <br><br> BBcrm напомнит вам о критическом остатке товара на складе, чтобы своевременно пополнить запасы.</p>
                     </div>
                 </div>
 
-                <div class="abilities__item">
+                <div class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="">
                         <span class="item__number"> 2 </span>
                     </div>
-                    <div class="items">
+                    <div class="item__row">
                         <h5 class="item__title">Клиенты и продажи</h5>
                          <p class="item__subtitle">Ведение клиентской базы, удобный поиск постоянных клиентов, добавление новых, статистика продаж каждого менеджера и покупок клиента как со склада, так и заказных позиций. <br><br> При оформлении продажи и получении оплаты, BBcrm создаст приходный ордер в разделе «Финансы».</p>
                     </div>
                 </div>
 
-                <div class="abilities__item">
+                <div class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="">
                         <span class="item__number"> 3 </span>
                     </div>
-                    <div class="items">
+                    <div class="item__row">
                         <h5 class="item__title">СМС уведомления клиентов</h5>
                          <p class="item__subtitle">Больше не нужно беспокоиться о том, что телефон клиента недоступен или ваш сотрудник просто забыл ему позвонить. Функция СМС-оповещения поможет значительно сэкономить время менеджеров на обслуживании клиента. BBcrm система автоматически отправит клиенту сообщение об изменении   статуса заказа: «Заказ принят», «Заказ прибыл», «Заказ отменен».</p>
                     </div>
                 </div>
 
-                <div class="abilities__item">
+                <div class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="">
                         <span class="item__number"> 4 </span>
                     </div>
-                    <div class="items">
+                    <div class="item__row">
                         <h5 class="item__title">Доходы и расходы</h5>
                          <p class="item__subtitle">Все денежные операции в одном разделе. С помощью удобного фильтра, вы сможете увидеть расчеты за выбранный период или вывести отчет по конкретному сотруднику.</p>
                     </div>
                 </div>
 
-                <div class="abilities__item">
+                <div class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="">
                         <span class="item__number"> 5 </span>
                     </div>
-                    <div class="items">
+                    <div class="item__row">
                         <h5 class="item__title">Расчет заработной платы</h5>
                          <p class="item__subtitle">Добавьте сотрудников, настройте автоматический расчет размера заработной платы. Можете указать фиксированный оклад, оклад + проценты от продаж или проценты от продаж без оклада.</p>
                     </div>
                 </div>
 
-                <div class="abilities__item">
+                <div class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="">
                         <span class="item__number"> 6 </span>
                     </div>
-                    <div class="items">
+                    <div class="item__row">
                         <h5 class="item__title">Работа со сканером штрих-кодов</h5>
                          <p class="item__subtitle">BBcrm поддерживает совместную работу  со сканером штрих-кодов, что упрощает поиск товара по базе программы и позволяет внедрение персональных дисконтных карт клиентов. <br><br> Большинство сканеров штрих-кодов работают без установки дополнительных программ.</p>
                     </div>
                 </div>
 
-                <div class="abilities__item">
+                <div class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="">
                         <span class="item__number"> 7 </span>
                     </div>
-                    <div class="items">
+                    <div class="item__row">
                         <h5 class="item__title">Права доступа</h5>
                          <p class="item__subtitle">Детальная настройка прав доступа пользователя к функциям программы позволит вам создать удобный рабочий инструмент как для менеджеров по продажам, так и для администраторов. В программе есть возможность разграничения доступа как для групп пользователей, так и персонально для каждого сотрудника.</p>
                     </div>
                 </div>
 
-                <div class="abilities__item">
+                <div class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="">
                         <span class="item__number"> 8 </span>
                     </div>
-                    <div class="items">
+                    <div class="item__row">
                         <h5 class="item__title">Удаленный доступ</h5>
                          <p class="item__subtitle">Программа работает в онлайн-режиме, что обеспечит удаленный круглосуточный доступ ко всем функциям и отчетам.</p>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="banner-wrapper">
             <div class="banner">
                 <div class="banner__info">
-                    <div class="info__img">
+                    <div class="banner__img">
                         <img src="img/logo.png" alt="">
                         <p>Программа <br> для автомагазинов</p>
                     </div>
                 </div>
                 <div class="banner__text">
                     <p>
-                        Проверьте, подходит ли вам <span class="text__span">BBcrm — получите 14 дней и помощь специалиста бесплатно</span>
+                        Проверьте, подходит ли вам <span class="banner__span">BBcrm — получите 14 дней и помощь специалиста бесплатно</span>
                     </p>
-                    <button><span>Получить бесплатно</span></button>
+                    <button class="banner__button"><span>Получить бесплатно</span></button>
                 </div>
             </div>
         </div>
+
         <div class="cost-wrapper">
             <div class="cost">
                 <h2 class="cost__title">Стоимость внедрения BBcrm в ваш бизнес</h2>
@@ -188,17 +182,17 @@
         </div>
         <div class="cards-wrapper">
             <div class="cards">
-                <div class="cards__item">
+                <div class="card">
                     <img src="img/cards/card-1.png" alt="">
                     <h4>Создать магазин</h4>
                     <p>Название, адрес магазина и реквизиты банка, если есть.</p>
                 </div>
-                <div class="cards__item">
+                <div class="card">
                     <img src="img/cards/card-2.png" alt="">
                     <h4>Заполнить склад</h4>
                     <p>По артикулу товара, программа определит его название и производителя, вам останется только указать категорию и ввести закупочную цену.</p>
                 </div>
-                <div class="cards__item">
+                <div class="card">
                     <img src="img/cards/card-3.png" alt="">
                     <h4>Добавить сотрудников</h4>
                     <p>Здесь можете разграничить доступ к разделам и функциям системы для каждого сотрудника или подразделения, например, менеджеры или администрация.</p>
@@ -215,6 +209,89 @@
             </div>
         </div>
 
+        <div class="signup-wrapper">
+            <div class="signup">
+                <h3>BBcrm готова к работе</h3>
+                <p>Проверьте, подходит ли вам <span>BBcrm — получите 14 дней и помощь специалиста бесплатно</span></p>
+                <button><span>РЕГИСТРАЦИЯ</span></button>
+
+            </div>
+        </div>
+
+        <div class="safe-wrapper">
+            <div class="safe">
+                <h2 class="safe__title">Безопасность и конфиденциальность</h2>
+                <p class="safe__text">BBcrm система — это программа для магазинов автозапчастей, работающая в облачном режиме. Все ваши данные хранятся на веб-серверах, оснащенных <span>ультравысокой системой безопасности.</span> Ведется ежедневное резервное копирование на сторонний носитель компании Яндекс.</p>
+
+                <p class="safe__text">Так же установлен <span> SSL сертификат безопасности,</span> который подразумевает безопасную связь. Он использует асимметричную криптографию для аутентификации ключей обмена, симметричное шифрование для сохранения конфиденциальности, коды аутентификации сообщений для целостности сообщений.</p>
+            </div>
+
+        </div>
+
+        <div class="tariff-wrapper">
+            <div class="tariff">
+                <h2 class="tariff__text">Тарифы на пользование BBcrm системы</h2>
+
+                <div class="tariff-card">
+                    <h4 class="tariff-card__title">30 Дней</h4>
+                    <div class="tariff-card__text">
+                        <p>Без ограничений в количестве пользователей и функционале </p>
+                        <p>Бесплатная информационная поддержка </p>
+                        <p>Бесплатный тестовый период – 14 дней</p>
+                    </div>
+                    <div class="tariff-card__price-div">
+                        <!-- <span class="tariff-card__sale"></span> -->
+                        <p class="tariff-card__price">2 500 ₽</p>
+                    </div>
+                </div>
+
+                <div class="tariff-card">
+                    <h4 class="tariff-card__title">180 Дней</h4>
+                    <div class="tariff-card__text">
+                        <p>Без ограничений в количестве пользователей и функционале </p>
+                        <p>Бесплатная информационная поддержка </p>
+                        <p>Бесплатный тестовый период – 14 дней</p>
+                    </div>
+                    <div class="tariff-card__price-div">
+                        <span class="tariff-card__sale">Экономия 600 Р</span>
+                        <p class="tariff-card__price">14 440 ₽</p>
+                    </div>
+                </div>
+
+                <div class="tariff-card">
+                    <h4 class="tariff-card__title">360 Дней</h4>
+                    <div class="tariff-card__text">
+                        <p>Без ограничений в количестве пользователей и функционале </p>
+                        <p>Бесплатная информационная поддержка </p>
+                        <p>Бесплатный тестовый период – 14 дней</p>
+                    </div>
+                    <div class="tariff-card__price-div">
+                        <span class="tariff-card__sale">Экономия 2 400</span>
+                        <p class="tariff-card__price">27 760 ₽</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-wrapper">
+            <div class="footer">
+                <div class="links">
+                    <a href="" class="links__link">О ПРОГРАММЕ</a>
+                    <a href="" class="links__link">ВОЗМОЖНОСТИ</a>
+                    <a href="" class="links__link">ТАРИФЫ</a>
+                </div>
+
+                <div class="footer__about">
+                    <a href="tel:88005002138" class="footer__data">8 800 500-21-38</a>
+                    <a href="mailto:info@bbcrm.ru" class="footer__data">info@bbcrm.ru</a>
+                </div>
+                <div class="footer__button">
+                    <span>РЕГИСТРАЦИЯ</span>
+                </div>
+                <p class="footer__text">Политика конфиденциальности и пользовательское соглашение</p>
+            </div>
+        </div>
     </main>
 </body>
 </html>
