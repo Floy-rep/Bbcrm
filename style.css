@@ -152,22 +152,8 @@ body {
 }
 
 .header__img img {
-  position: relative;
   max-width: 600px;
   width: 100%;
-  z-index: 2;
-}
-
-.header__img .header__shadow {
-  position: relative;
-}
-
-.header__img .header__shadow img {
-  position: absolute;
-  left: -35px;
-  bottom: -25px;
-  z-index: 1;
-  width: 50%;
 }
 
 @media screen and (max-width: 976px) {
@@ -323,6 +309,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #F7F7F7;
+  position: relative;
+  top: -120px;
 }
 
 .whatisit__help .whatisit__text {
@@ -336,6 +324,12 @@ body {
 
 .whatisit__help .whatisit__text span {
   font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+  .whatisit__help {
+    top: 0px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -839,7 +833,7 @@ body {
   -ms-grid-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   grid-column-gap: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 .tariff__text {

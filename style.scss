@@ -132,20 +132,8 @@ body {
 
 	&__img {
 		img {
-			position: relative;
 			max-width: 600px;
 			width: 100%;
-			z-index: 2;
-		}
-		.header__shadow {
-			position: relative;
-			img {
-				position: absolute;
-				left: -35px;
-				bottom: -25px;
-				z-index: 1;
-				width: 50%;
-			}
 		}
 	}
 }
@@ -264,6 +252,10 @@ body {
 		justify-content: center;
 		align-items: center;
 		background-color: #F7F7F7;
+		position: relative;
+		top: -120px;
+
+		
 
 		.whatisit__text {
 			font-style: normal;
@@ -276,6 +268,12 @@ body {
 				font-weight: bold;
 			}
 		}
+	}
+}
+
+@media screen and (max-width:1200px){
+	.whatisit__help{
+		top:0px;
 	}
 }
 
@@ -683,7 +681,7 @@ body {
 	display: grid;
 	grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
 	grid-column-gap: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 100px;
 
 	&__text{
 		grid-column: 1/4;
