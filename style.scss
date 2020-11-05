@@ -34,6 +34,12 @@ body {
 	line-height: 16px;
 	letter-spacing: 0.06em;
 
+	&__about-burger{
+		display: none;
+		width: 16px;
+		height: 16px;
+	}
+
 	&__logo{
 		display: flex;
 		align-items: center;
@@ -105,7 +111,8 @@ body {
 
 		@media screen and (max-width:1280px){
 			line-height: calc(28px + 50 * ((100vw - 320px) / (1280 - 320)));
-			font-size: calc(26px + 36 * ((100vw - 320px) / (1280 - 320)));
+			font-size: calc(14px + 30 * ((100vw - 320px) / (1280 - 320)));
+			margin-bottom: 10px;
 		}
 	}
 
@@ -124,10 +131,22 @@ body {
 		border-radius: 4px;
 		text-transform: uppercase;
 		letter-spacing: 0.06em;
+		margin-bottom: 15px;
+
+		@media screen and (max-width:1280px){
+			width: auto;
+			height: 30px;
+		}
+
 		span {
 			color: white;
 			letter-spacing: 0.06em;
 			font-weight: 700;
+
+		@media screen and (max-width:1280px){
+			line-height: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+			font-size: calc(10px + 4 * ((100vw - 320px) / (1280 - 320)));
+			}
 		}
 	}
 
@@ -135,19 +154,45 @@ body {
 		img {
 			max-width: 600px;
 			width: 100%;
+
+			@media screen and (max-width: 1024px){
+				position: relative;
+				left: -20%;
+				width: 100%;
+			}
 		}
 	}
+}
+
+@media screen and (max-width: 768px){
+	.header__item {
+		line-height: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+		font-size: calc(10px + 4 * ((100vw - 320px) / (1280 - 320)));
+	}	
 }
 
 @media screen and (max-width: 1024px){
 	.header{
 		display: grid;
-		// grid-template-rows: 1fr 1fr;
-		// grid-template-columns: 1fr 1fr;
+		grid-template-columns: 3fr 5fr 4fr;
 		grid-row-gap: 0;
+		min-height: auto;
+
+		&__about-burger{
+			display: flex;
+		}
+
+		&__logo{
+			width: 110%;
+		}
 
 		&__about {
 			grid-column: 2/4;
+			justify-content: space-around;
+		}
+
+		&__about-button {
+			display: none;
 		}
 
 		&__subtitle{
@@ -209,13 +254,18 @@ body {
 	}
 }
 
+.whatisit-wrapper{
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
 .whatisit {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 40px;
 	// min-height: 600px;
 	min-height: auto;
-	max-width: 1280px;
+	margin-top: 60px;
 	// margin: 70px auto 0 auto;
 
 	font-family: "Roboto Slab";
@@ -300,6 +350,7 @@ body {
 
 @media screen and (max-width:992px){
 	.whatisit{
+		margin-top: 0px;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr auto;
 		margin: 0 32px;
@@ -603,6 +654,10 @@ body {
 .download {
 	margin: 100px 32px;
 
+	@media screen and (max-width:992px) {
+		margin: 40px 32px;
+	}
+
 	&__text {
 		font-size: 24px;
 		line-height: 36px;
@@ -611,6 +666,7 @@ body {
 		@media screen and (max-width:992px) {
 			font-size: calc(16px + 4 * ((100vw - 320px) / (1280 - 320)));
 			line-height: calc(20px + 6 * ((100vw - 320px) / (1280 - 320)));
+			margin: 20px 32px;
 		}
 	}
 	&__link {
@@ -814,6 +870,11 @@ body {
 			line-height: 24px;
 			letter-spacing: 0.04em;
 			color: #404040;
+
+			@media screen and (max-width:1024px) {
+				font-size: calc(14px + 2 * ((100vw - 320px) / (1280 - 320)));
+				line-height: calc(20px + 4 * ((100vw - 320px) / (1280 - 320)));
+			}
 
 			p{
 				margin: 7px 0;
