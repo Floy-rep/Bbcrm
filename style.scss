@@ -45,7 +45,7 @@ body {
 		align-items: center;
 		img {
 			width: 70%;
-			margin-left: 40px;
+			margin-left: 15px;
 		}
 	}
 	
@@ -54,6 +54,7 @@ body {
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
+		margin-top: 3px;
 	}
 
 	&__about-button {
@@ -97,7 +98,7 @@ body {
 	&__content{
 		grid-column: 1/3;
 		color: #FFFFFF;
-		margin: 0 32px;
+		margin: 0 15px;
 	}
 
 	&__title{
@@ -110,7 +111,7 @@ body {
 		margin-bottom: 30px;
 
 		@media screen and (max-width:1280px){
-			line-height: calc(28px + 50 * ((100vw - 320px) / (1280 - 320)));
+			line-height: calc(28px + 50 * ( (100vw - 320px) / (1280 - 320) ) );
 			font-size: calc(14px + 30 * ((100vw - 320px) / (1280 - 320)));
 			margin-bottom: 10px;
 		}
@@ -263,11 +264,8 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 40px;
-	// min-height: 600px;
 	min-height: auto;
 	margin-top: 60px;
-	// margin: 70px auto 0 auto;
-
 	font-family: "Roboto Slab";
 	letter-spacing: 0.03em;
 
@@ -305,8 +303,6 @@ body {
 				line-height:18px;
 			}
 		}
-
-		
 	}
 
 	&__help{
@@ -345,6 +341,7 @@ body {
 @media screen and (max-width:1200px){
 	.whatisit__help{
 		top:0px;
+		padding: 40px;
 	}
 }
 
@@ -353,7 +350,12 @@ body {
 		margin-top: 0px;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr auto;
-		margin: 0 32px;
+		margin: 0 15px;
+		&__top{
+			h2{
+				font-weight: 700;
+			}
+		}
 		&__img{
 			display: none;
 		}
@@ -369,13 +371,13 @@ body {
 	justify-content: center;
 }
 .alilities {
-	// min-height: 1900px;
 	min-height: auto;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	flex-direction: row;
 	max-width: 700px;
+
 	h2 {
 		font-family: Roboto Slab;
 		font-weight: 300;
@@ -390,6 +392,7 @@ body {
 			margin-top: 20px;
 			line-height: 48px;
 			font-size: calc(26px + 36 * ((100vw - 320px) / (1280 - 320)));
+			font-weight: 700;
 		}
 	}
 }
@@ -509,7 +512,7 @@ body {
 		z-index: 1;
 
 		p{
-			margin-right: 40px;
+			margin: 0 15px;
 			width: 287px;
 			font-size: 16px;
 			line-height: 24px;
@@ -520,6 +523,7 @@ body {
 		.banner__button {
 			width: 302px;
 			height: 66px;
+			margin: 0 15px;
 			background: #1F98E9;
 			border-radius: 4px;
 			span {
@@ -545,7 +549,7 @@ body {
 @media screen and (max-width:768px){
 	.banner{
 		display: flex;
-		margin: 0 32px;
+		margin: 0 15px;
 
 	}
 }
@@ -558,7 +562,7 @@ body {
 .cost {
 	// min-height: 320px;
 	min-height: auto;
-	margin: 0 32px;
+	margin: 0 15px;
 
 	&__title {
 		max-width: 640px;
@@ -572,6 +576,8 @@ body {
 		@media screen and (max-width:768px){
 			line-height: 32px;
 			font-size: calc(18px + 36 * ((100vw - 320px) / (1280 - 320)));
+			font-weight: 700;
+			margin-top: 0;
 		}
 	}
 	&__subtitle {
@@ -580,12 +586,17 @@ body {
 		line-height: 28px;
 		letter-spacing: 0.04em;
 		color: #404040;
+		@media screen and (max-width:768px){
+			font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+			line-height: calc(18px + 6 * ((100vw - 320px) / (1280 - 320)));
+		}
 		span {
 			font-weight: bold;
 		}
 	}
 	&__subtitle:first-child{
 		margin-bottom: 30px;
+		
 	}
 }
 
@@ -597,7 +608,7 @@ body {
 .cards {
 	// min-height: 400px;
 	min-height: auto;
-	margin: 0 32px;
+	margin: 0 15px;
 	display: grid;
 	grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
 	grid-column-gap: 30px;
@@ -606,7 +617,6 @@ body {
 @media screen and (max-width:768px){
 	.cards{
 		grid-template-columns: 1fr;
-		grid-template-rows: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
 	}
 
 	.card{
@@ -635,6 +645,10 @@ body {
 		max-width: 360px;
 		line-height: 24px;
 		color: #404040;
+		@media screen and (max-width:992px) {
+			font-size: calc(16px + 4 * ((100vw - 320px) / (1280 - 320)));
+			line-height: calc(20px + 6 * ((100vw - 320px) / (1280 - 320)));
+		}
 	}
 }
 
@@ -652,10 +666,10 @@ body {
 }
 
 .download {
-	margin: 100px 32px;
+	margin: 100px 15px;
 
 	@media screen and (max-width:992px) {
-		margin: 40px 32px;
+		margin: 40px 15px;
 	}
 
 	&__text {
@@ -666,7 +680,7 @@ body {
 		@media screen and (max-width:992px) {
 			font-size: calc(16px + 4 * ((100vw - 320px) / (1280 - 320)));
 			line-height: calc(20px + 6 * ((100vw - 320px) / (1280 - 320)));
-			margin: 20px 32px;
+			margin: 20px 15px;
 		}
 	}
 	&__link {
@@ -681,8 +695,7 @@ body {
 		}
 
 		img {
-			
-			margin-right: 20px;
+			margin: 0 15px;
 		}
 
 		.download__link-decor {
@@ -700,7 +713,6 @@ body {
 .signup{
 	margin: 0 auto;
 	max-width: 653px;
-	// min-height: 378px;
 	min-height: auto;
 	box-sizing: border-box;
 	padding: 60px;
@@ -728,6 +740,7 @@ body {
 
 		@media screen and (max-width:992px) {
 			font-size: calc(18px + 18 * ((100vw - 320px) / (1280 - 320)));
+			font-weight: 700;
 		}
 	}
 	p{
@@ -788,6 +801,7 @@ body {
 		@media screen and (max-width:768px){
 			line-height: calc(26px + 45 * ((100vw - 320px) / (1280 - 320)));
 			font-size: calc(18px + 36 * ((100vw - 320px) / (1280 - 320)));
+			font-weight: 700;
 		}
 	}
 
@@ -799,7 +813,7 @@ body {
 		color: #404040;
 
 		@media screen and (max-width:992px) {
-			font-size: calc(16px + 2 * ((100vw - 320px) / (1280 - 320)));
+			font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
 			line-height: calc(20px + 4 * ((100vw - 320px) / (1280 - 320)));
 		}
 
@@ -815,7 +829,7 @@ body {
 }
 
 .tariff{
-	margin: 0 32px;
+	margin: 0 15px;
 	display: grid;
 	grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
 	grid-column-gap: 30px;
@@ -834,12 +848,13 @@ body {
 		@media screen and (max-width:768px){
 			line-height: calc(26px + 45 * ((100vw - 320px) / (1280 - 320)));
 			font-size: calc(18px + 36 * ((100vw - 320px) / (1280 - 320)));
+			font-weight: 700;
 		}
 	}
 
 	.tariff-card{
 		display: grid;
-		grid-template-rows: 84px auto 160px;
+		grid-template-rows: 84px auto 120px;
 		border: 1px solid lightgray;
 		box-shadow: 0px 7px 8px -3px rgba(50, 50, 50, 0.3);
 
@@ -864,7 +879,6 @@ body {
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			margin: 0;
 			padding: 30px 40px 0 40px;
 			font-size: 16px;
 			line-height: 24px;
@@ -874,6 +888,10 @@ body {
 			@media screen and (max-width:1024px) {
 				font-size: calc(14px + 2 * ((100vw - 320px) / (1280 - 320)));
 				line-height: calc(20px + 4 * ((100vw - 320px) / (1280 - 320)));
+			}
+
+			@media screen and (max-width:768px) {
+				text-align: center;
 			}
 
 			p{
@@ -947,7 +965,6 @@ body {
 	.links{
 		justify-content: flex-start;
 	}
-
 
 	&__about{
 		display: flex;
@@ -1052,5 +1069,4 @@ body {
 			}
 		}
 	}
-
 }
