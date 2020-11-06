@@ -11,8 +11,8 @@
 </head>
 <body>
     <main>
-        <div class="header-wrapper">
-            <div class="header">
+        <header class="header-wrapper">
+            <div class="header" id="header">
                 <div class="header__logo">
                     <img src="img/logo.png" title="Bbcrm" alt="Not Found">
                 </div>
@@ -25,7 +25,28 @@
                     <a class="header__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
                     <button class="header__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
                     <a class="header__item" title="Войти в аккаунт" href="#">ВОЙТИ</a>
-                    <img class="header__about-burger" src="img/burger.png" title="Еще..." alt="Not Found">
+
+                    <div id="burger" class="burger">
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+
+                        <div class="burger__menu" id="burger__menu">
+
+                            <div class="burger__about">
+                                <a class="burger__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
+                                <button class="burger__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
+                                <a class="burger__item" title="Войти в аккаунт" href="#">ВОЙТИ</a>
+                            </div>
+
+                            <div class="links">
+                                <a href="#about" title="Что такое BBcrm?" class="links__link">О ПРОГРАММЕ</a>
+                                <a href="#ability" title="Восемь основных возможностей BBcrm" class="links__link">ВОЗМОЖНОСТИ</a>
+                                <a href="#tariff" title="Тарифы на пользование BBcrm системы" class="links__link">ТАРИФЫ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <img class="header__about-burger" src="img/burger.png" title="Еще..." alt="Not Found"> -->
                 </div>
 
                 <div class="header__content"> 
@@ -40,7 +61,7 @@
                     <img src="img/header_box_test.png" alt="Not Found">
                 </div>
             </div>
-        </div>
+        </header>
 
         <div class="whatisit-wrapper">
             <a id="about" ></a>
@@ -48,13 +69,13 @@
                 <div class="whatisit__img">
                     <img src="img/monitor/mon1" title="Как будет выглядеть" alt="Not Found">
                 </div>
-                <div class="whatisit__top">
+                <article class="whatisit__top">
                     <h2>Что такое BBcrm</h2>
                     <p class="whatisit__subtitle">
                         Это онлайн-программа для эффективной работы автомагазина. В ней учтены большинство необходимых функций, облегчающих работу менеджеров и директоров. <br><br>
                         Продукт не требует платного внедрения в ваш бизнес и рассчитан на работу как с одним, так и с несколькими магазинами.
                     </p>
-                </div>
+                </article>
                 <div class="whatisit__help">
                     <p class="whatisit__text">
                         Проверьте, подходит ли вам BBcrm — <span> получите 14 дней и помощь специалиста бесплатно </span>
@@ -67,7 +88,7 @@
             <a id="ability" ></a>
             <div class="alilities">
                 <h2>Возможности BBcrm</h2>
-                <div class="item">
+                <section class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="Not Found">
                         <span class="item__number"> 1 </span>
@@ -76,9 +97,9 @@
                         <h5 class="item__title">Ведение склада</h5>
                          <p class="item__subtitle">Полноценный складской учет, контроль остатков, оформление поступлений и возвратов, составление заявок поставщикам. <br><br> BBcrm напомнит вам о критическом остатке товара на складе, чтобы своевременно пополнить запасы.</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="item">
+                <section class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="Not Found">
                         <span class="item__number"> 2 </span>
@@ -87,9 +108,9 @@
                         <h5 class="item__title">Клиенты и продажи</h5>
                          <p class="item__subtitle">Ведение клиентской базы, удобный поиск постоянных клиентов, добавление новых, статистика продаж каждого менеджера и покупок клиента как со склада, так и заказных позиций. <br><br> При оформлении продажи и получении оплаты, BBcrm создаст приходный ордер в разделе «Финансы».</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="item">
+                <section class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="Not Found">
                         <span class="item__number"> 3 </span>
@@ -98,9 +119,9 @@
                         <h5 class="item__title">СМС уведомления клиентов</h5>
                          <p class="item__subtitle">Больше не нужно беспокоиться о том, что телефон клиента недоступен или ваш сотрудник просто забыл ему позвонить. Функция СМС-оповещения поможет значительно сэкономить время менеджеров на обслуживании клиента. BBcrm система автоматически отправит клиенту сообщение об изменении   статуса заказа: «Заказ принят», «Заказ прибыл», «Заказ отменен».</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="item">
+                <section class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="Not Found">
                         <span class="item__number"> 4 </span>
@@ -109,9 +130,9 @@
                         <h5 class="item__title">Доходы и расходы</h5>
                          <p class="item__subtitle">Все денежные операции в одном разделе. С помощью удобного фильтра, вы сможете увидеть расчеты за выбранный период или вывести отчет по конкретному сотруднику.</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="item">
+                <section class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="Not Found">
                         <span class="item__number"> 5 </span>
@@ -120,9 +141,9 @@
                         <h5 class="item__title">Расчет заработной платы</h5>
                          <p class="item__subtitle">Добавьте сотрудников, настройте автоматический расчет размера заработной платы. Можете указать фиксированный оклад, оклад + проценты от продаж или проценты от продаж без оклада.</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="item">
+                <section class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="Not Found">
                         <span class="item__number"> 6 </span>
@@ -131,9 +152,9 @@
                         <h5 class="item__title">Работа со сканером штрих-кодов</h5>
                          <p class="item__subtitle">BBcrm поддерживает совместную работу  со сканером штрих-кодов, что упрощает поиск товара по базе программы и позволяет внедрение персональных дисконтных карт клиентов. <br><br> Большинство сканеров штрих-кодов работают без установки дополнительных программ.</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="item">
+                <section class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="Not Found">
                         <span class="item__number"> 7 </span>
@@ -142,9 +163,9 @@
                         <h5 class="item__title">Права доступа</h5>
                          <p class="item__subtitle">Детальная настройка прав доступа пользователя к функциям программы позволит вам создать удобный рабочий инструмент как для менеджеров по продажам, так и для администраторов. В программе есть возможность разграничения доступа как для групп пользователей, так и персонально для каждого сотрудника.</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="item">
+                <section class="item">
                     <div class="item__left">
                         <img src="img/ability.png" alt="Not Found">
                         <span class="item__number"> 8 </span>
@@ -153,12 +174,12 @@
                         <h5 class="item__title">Удаленный доступ</h5>
                          <p class="item__subtitle">Программа работает в онлайн-режиме, что обеспечит удаленный круглосуточный доступ ко всем функциям и отчетам.</p>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
 
         <div class="banner-wrapper">
-            <div class="banner">
+            <article class="banner">
                 <div class="banner__info">
                     <div class="banner__img">
                         <img src="img/logo.png" title="Bbcrm" alt="Not Found">
@@ -171,7 +192,7 @@
                     </p>
                     <button class="banner__button"><span>Получить бесплатно</span></button>
                 </div>
-            </div>
+            </article>
         </div>
 
         <div class="cost-wrapper">
@@ -183,32 +204,32 @@
         </div>
         <div class="cards-wrapper">
             <div class="cards">
-                <div class="card">
+                <section class="card">
                     <img src="img/cards/card-1.jpg" title="Создать магазин" alt="Not Found">
                     <h4>Создать магазин</h4>
                     <p>Название, адрес магазина и реквизиты банка, если есть.</p>
-                </div>
-                <div class="card">
+                </section>
+                <section class="card">
                     <img src="img/cards/card-2.jpg" title="Заполнить склад" alt="Not Found">
                     <h4>Заполнить склад</h4>
                     <p>По артикулу товара, программа определит его название и производителя, вам останется только указать категорию и ввести закупочную цену.</p>
-                </div>
-                <div class="card">
+                </section>
+                <section class="card">
                     <img src="img/cards/card-3.jpg" title="Добавить сотрудников" alt="Not Found">
                     <h4>Добавить сотрудников</h4>
                     <p>Здесь можете разграничить доступ к разделам и функциям системы для каждого сотрудника или подразделения, например, менеджеры или администрация.</p>
-                </div>
+                </section>
             </div>
         </div>
         <div class="download-wrapper">
             <div class="wrapper">
-                <div class="download">
+                <article class="download">
                     <p class="download__text">Возможен импорт базы товаров из вашей программы в #bbcrm через xml или csv файл.</p>
                     <a class="download__link" href="">
                         <img src="img/download.png" title="Скачать сейчас" alt="Not Found">
                         <span>Скачать примеры <span class="download__link-decor">xml</span> и сvs</span>
                     </a>
-                </div>
+                </article>
             </div>
         </div>
 
@@ -222,14 +243,14 @@
         </div>
 
         <div class="safe-wrapper">
-            <div class="wrapper">
+            <article class="wrapper">
                 <div class="safe">
                     <h2 class="safe__title">Безопасность и конфиденциальность</h2>
                     <p class="safe__text">BBcrm система — это программа для магазинов автозапчастей, работающая в облачном режиме. Все ваши данные хранятся на веб-серверах, оснащенных <span>ультравысокой системой безопасности.</span> Ведется ежедневное резервное копирование на сторонний носитель компании Яндекс.</p>
     
                     <p class="safe__text">Так же установлен <span> SSL сертификат безопасности,</span> который подразумевает безопасную связь. Он использует асимметричную криптографию для аутентификации ключей обмена, симметричное шифрование для сохранения конфиденциальности, коды аутентификации сообщений для целостности сообщений.</p>
                 </div>
-            </div>
+            </article>
         </div>
 
         <div class="tariff-wrapper">
@@ -237,7 +258,7 @@
             <div class="tariff">
                 <h2 class="tariff__text">Тарифы на пользование BBcrm системы</h2>
 
-                <div class="tariff-card">
+                <section class="tariff-card">
                     <h4 class="tariff-card__title">30 Дней</h4>
                     <div class="tariff-card__text">
                         <p>Без ограничений в количестве пользователей и функционале </p>
@@ -248,9 +269,9 @@
                         <!-- <span class="tariff-card__sale"></span> -->
                         <p class="tariff-card__price">2 500 ₽</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="tariff-card">
+                <section class="tariff-card">
                     <h4 class="tariff-card__title">180 Дней</h4>
                     <div class="tariff-card__text">
                         <p>Без ограничений в количестве пользователей и функционале </p>
@@ -261,9 +282,9 @@
                         <span class="tariff-card__sale">Экономия 600 Р</span>
                         <p class="tariff-card__price">14 440 ₽</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="tariff-card">
+                <section class="tariff-card">
                     <h4 class="tariff-card__title">360 Дней</h4>
                     <div class="tariff-card__text">
                         <p>Без ограничений в количестве пользователей и функционале </p>
@@ -274,12 +295,12 @@
                         <span class="tariff-card__sale">Экономия 2 400</span>
                         <p class="tariff-card__price">27 760 ₽</p>
                     </div>
-                </div>
+                </section>
 
             </div>
         </div>
 
-        <div class="footer-wrapper">
+        <footer class="footer-wrapper">
             <div class="wrapper">
                 <div class="footer">
                     <div class="links">
@@ -298,7 +319,7 @@
                     <p class="footer__text">Политика конфиденциальности и пользовательское соглашение</p>
                 </div>
             </div>
-        </div>
+        </article>
     </main>
     <script src="script.js"></script>
 </body>
