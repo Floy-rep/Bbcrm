@@ -321,6 +321,10 @@ body {
       flex-basis: 50%;
 }
 
+.header__form {
+  margin-right: 20px;
+}
+
 .header__about-button {
   max-width: 179px;
   height: 56px;
@@ -1525,7 +1529,7 @@ body {
   }
 }
 
-.footer__button {
+.footer__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1538,6 +1542,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer__button {
   background: #1F98E9;
   border-radius: 4px;
   width: 179px;

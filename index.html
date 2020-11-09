@@ -26,7 +26,9 @@
                     </div>
                     <div class="header__about">
                         <a class="header__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
-                        <button class="header__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
+                        <form class="header__form" action="Pages/SignUp/signup.html">
+                            <button type="submit" class="header__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
+                        </form>
                         <a class="header__item" title="Войти в аккаунт" href="Pages/SignIn/signin.html">ВОЙТИ</a>
     
                         <div id="burger" class="burger">
@@ -38,7 +40,7 @@
     
                                 <div class="burger__about">
                                     <a class="burger__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
-                                    <button class="burger__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
+                                    <button href="Pages/SignUp/signup.html" class="burger__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
                                     <a class="burger__item" title="Войти в аккаунт" href="Pages/SignIn/signin.html">ВОЙТИ</a>
                                 </div>
     
@@ -56,9 +58,13 @@
                 <div class="header__content"> 
                     <h1 class="header__title">Программа <br> для автомагазинов</h1>
                     <p class="header__subtitle">Помогает вести учет склада, увеличивает <br> продажи, экономит деньги и время</p>
-                    <button class="header__button" title="Закажите прямо сейчас!">
-                        <span>ПОЛУЧИТЬ БЕСПЛАТНО</span>    
-                    </button>
+
+                    <form action="Pages/SignUp/signup.html">
+                        <button class="header__button" title="Закажите прямо сейчас!">
+                            <span>ПОЛУЧИТЬ БЕСПЛАТНО</span>    
+                        </button>
+                    </form>
+                    
                 </div>
                 
                 <div class="header__img" id='header_img'>
@@ -194,7 +200,11 @@
                     <p>
                         Проверьте, подходит ли вам <span class="banner__span">BBcrm — получите 14 дней и помощь специалиста бесплатно</span>
                     </p>
-                    <button class="banner__button"><span>Получить бесплатно</span></button>
+
+                    <form action="Pages/SignUp/signup.html">
+                        <button class="banner__button"><span>Получить бесплатно</span></button>
+                    </form>
+
                 </div>
             </article>
         </div>
@@ -241,7 +251,7 @@
             <div class="signup">
                 <h3>BBcrm готова к работе</h3>
                 <p>Проверьте, подходит ли вам <span>BBcrm — получите 14 дней и помощь специалиста бесплатно</span></p>
-                <button><span>РЕГИСТРАЦИЯ</span></button>
+                <button href="Pages/SignUp/signup.html"><span>РЕГИСТРАЦИЯ</span></button>
 
             </div>
         </div>
@@ -317,9 +327,14 @@
                         <a href="mailto:info@bbcrm.ru" class="footer__data">info@bbcrm.ru</a>
                         <img class="footer__img" src="img/footer_line.jpg" alt="Not Found">
                     </div>
-                    <div class="footer__button">
+
+                    <form class="footer__form" action="Pages/SignUp/signup.html">
+                        <button class="footer__button"><span>РЕГИСТРАЦИЯ</span></button>
+                    </form>
+
+                    <!-- <div >
                         <span>РЕГИСТРАЦИЯ</span>
-                    </div>
+                    </div> -->
                     <p class="footer__text">Политика конфиденциальности и пользовательское соглашение</p>
                 </div>
             </div>

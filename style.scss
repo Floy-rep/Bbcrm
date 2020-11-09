@@ -258,6 +258,10 @@ body {
 		flex-basis: 50%;
 	}
 
+	&__form{
+		margin-right: 20px;
+	}
+
 	&__about-button {
 		max-width: 179px;
 		height: 56px;
@@ -1222,12 +1226,15 @@ body {
 		}
 	}
 
-	&__button{
+	&__form{
 		display: flex;
 		justify-self: flex-start;
 		align-self: center;
 		justify-content: center;
 		align-items: center;
+	}
+
+	&__button{
 		background: #1F98E9;
 		border-radius: 4px;
 		width: 179px;
