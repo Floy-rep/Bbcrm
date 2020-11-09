@@ -12,42 +12,46 @@
 <body>
     <main>
         <header class="header-wrapper">
+            <div id="fixed-wrapper" class="">
+            </div>
             <div class="header" id="header">
-                <div class="header__logo">
-                    <img src="img/logo.png" title="Bbcrm" alt="Not Found">
-                </div>
-                <div class="links">
-                    <a href="#about" title="Что такое BBcrm?" class="links__link">О ПРОГРАММЕ</a>
-                    <a href="#ability" title="Восемь основных возможностей BBcrm" class="links__link">ВОЗМОЖНОСТИ</a>
-                    <a href="#tariff" title="Тарифы на пользование BBcrm системы" class="links__link">ТАРИФЫ</a>
-                </div>
-                <div class="header__about">
-                    <a class="header__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
-                    <button class="header__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
-                    <a class="header__item" title="Войти в аккаунт" href="#">ВОЙТИ</a>
-
-                    <div id="burger" class="burger">
-                        <span class="burger__line"></span>
-                        <span class="burger__line"></span>
-                        <span class="burger__line"></span>
-
-                        <div class="burger__menu" id="burger__menu">
-
-                            <div class="burger__about">
-                                <a class="burger__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
-                                <button class="burger__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
-                                <a class="burger__item" title="Войти в аккаунт" href="#">ВОЙТИ</a>
-                            </div>
-
-                            <div class="links">
-                                <a href="#about" title="Что такое BBcrm?" class="links__link">О ПРОГРАММЕ</a>
-                                <a href="#ability" title="Восемь основных возможностей BBcrm" class="links__link">ВОЗМОЖНОСТИ</a>
-                                <a href="#tariff" title="Тарифы на пользование BBcrm системы" class="links__link">ТАРИФЫ</a>
+                <div id="fixed" class="header__fixed">
+                    <div class="header__logo">
+                        <img src="img/logo.png" title="Bbcrm" alt="Not Found">
+                    </div>
+                    <div class="links">
+                        <a href="#about" title="Что такое BBcrm?" class="links__link">О ПРОГРАММЕ</a>
+                        <a href="#ability" title="Восемь основных возможностей BBcrm" class="links__link">ВОЗМОЖНОСТИ</a>
+                        <a href="#tariff" title="Тарифы на пользование BBcrm системы" class="links__link">ТАРИФЫ</a>
+                    </div>
+                    <div class="header__about">
+                        <a class="header__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
+                        <button class="header__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
+                        <a class="header__item" title="Войти в аккаунт" href="Pages/SignIn/signin.html">ВОЙТИ</a>
+    
+                        <div id="burger" class="burger">
+                            <span class="burger__line"></span>
+                            <span class="burger__line"></span>
+                            <span class="burger__line"></span>
+    
+                            <div class="burger__menu" id="burger__menu">
+    
+                                <div class="burger__about">
+                                    <a class="burger__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
+                                    <button class="burger__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
+                                    <a class="burger__item" title="Войти в аккаунт" href="Pages/SignIn/signin.html">ВОЙТИ</a>
+                                </div>
+    
+                                <div class="links">
+                                    <a href="#about" title="Что такое BBcrm?" class="links__link">О ПРОГРАММЕ</a>
+                                    <a href="#ability" title="Восемь основных возможностей BBcrm" class="links__link">ВОЗМОЖНОСТИ</a>
+                                    <a href="#tariff" title="Тарифы на пользование BBcrm системы" class="links__link">ТАРИФЫ</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <img class="header__about-burger" src="img/burger.png" title="Еще..." alt="Not Found"> -->
-                </div>
+                </div>  
+
 
                 <div class="header__content"> 
                     <h1 class="header__title">Программа <br> для автомагазинов</h1>
@@ -57,7 +61,7 @@
                     </button>
                 </div>
                 
-                <div class="header__img">
+                <div class="header__img" id='header_img'>
                     <img src="img/header_box_test.png" alt="Not Found">
                 </div>
             </div>
