@@ -9,6 +9,10 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
 .main{
     display: grid;
     grid-template-columns: minmax(150px, 1fr) 1.3fr;
@@ -19,13 +23,23 @@ a{
         grid-column-gap: 10px;
     }
 
+    &__link-div{
+        display: inline-block;
+        span{
+            @media screen and (max-width:992px){
+                font-size: calc(10px + 6  * ((100vw - 320px) / (1280 - 320)));
+                line-height: calc(12px + 10 * ((100vw - 320px) / (1280 - 320)));
+            }
+        }
+    }
+
     &__title{
         font-family: Roboto Slab;
         font-weight: 300;
         font-size: 54px;
         line-height: 71px;
         letter-spacing: 0.03em;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
 
         @media screen and (max-width:992px) {
             font-size: calc(20px + 34 * ((100vw - 320px) / (1280 - 320)));
@@ -47,22 +61,24 @@ a{
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.05em;
+        color: #1F98E9;
         @media screen and (max-width:992px) {
-            font-size: calc(13px + 3 * ((100vw - 320px) / (1280 - 320)));
-            line-height: calc(13px + 3 * ((100vw - 320px) / (1280 - 320)));
+            font-size: calc(11px + 5 * ((100vw - 320px) / (1280 - 320)));
+            line-height: calc(11px + 5 * ((100vw - 320px) / (1280 - 320)));
             margin: 0;
         }
     }
 
     &__link:hover{
         text-decoration-line: underline;
-        color: #1F98E9;
         
     }
 
     &__new-account{
-        display: block;
-        margin: 3px 0;
+        margin: 3px 0 0 30px;
+        @media screen and (max-width:992px) {
+            margin: 3px 0 0 10px;
+        }
     }
 
     &__new-pass{
@@ -151,18 +167,64 @@ a{
 }
 
 .form{
+
+    &__password{
+        position: relative;
+        max-width: 480px;
+        width: 100%;
+        .password-control{
+            background-size: contain;
+            width: 20px;
+            height: 14px;
+            position: absolute;
+            top: 13px;
+            right: 10px;
+            user-select: none;
+        }
+
+        .hide{
+            background: url(img/show.jpg) no-repeat;
+        }
+
+        .show{
+            background: url(img/hide.jpg) no-repeat;
+        }
+    }
+
+    &__message{
+        .message-input{
+            width: 110px;
+            padding: 0px 15px;
+        }
+
+        .form__link-message{
+            color:#1F98E9;
+            margin-left: 20px;
+
+            @media screen and (max-width:500px) {
+                margin-left: 0px;
+                margin-top: 10px;
+                display: block;
+                font-size: calc(12px + 6 * ((100vw - 320px) / (1280 - 320)));
+            }
+        }
+        
+    }
+
     &__element{
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         @media screen and (max-width:470px) {
             margin-bottom: 3%;
         }
-
         span{
             font-size: 16px;
             line-height: 24px;
             letter-spacing: 0.04em;
             display: block;
+            @media screen and (max-width:992px) {
+                font-size: calc(13px + 3 * ((100vw - 320px) / (1280 - 320)));
+            }
         }
         input{
             max-width: 480px;
@@ -173,19 +235,29 @@ a{
             border-radius: 4px;
             padding: 0px 10px;
 
-            @media screen and (max-width:470px) {
-                width: 155px;
-            }
         }
+    }
+
+    hr{
+        color:#DBDBDB;
+        max-width: 480px;
     }
 
     &__text{
         max-width: 514px;
-        margin-bottom: 80px;
+        margin-bottom: 15px;
         font-size: 14px;
         line-height: 22px;
         letter-spacing: 0.05em;
         color: #404040;
+
+        @media screen and (max-width:992px){
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-size: calc(9px + 5 * ((100vw - 320px) / (1280 - 320)));
+            line-height: calc(12px + 10 * ((100vw - 320px) / (1280 - 320)));
+        }
+
         a{
             color: #1F98E9;
         }
@@ -205,6 +277,10 @@ a{
         margin: 13px 0 25px 0;
         border: none;
         cursor: pointer;
+
+        @media screen and (max-width:992px) {
+            font-size: calc(11px + 3 * ((100vw - 320px) / (1280 - 320)));
+        }
 
         @media screen and (max-width:768px) {
             width: 100%;

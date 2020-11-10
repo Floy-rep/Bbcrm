@@ -178,6 +178,33 @@ a {
   background-blend-mode: lighten;
 }
 
+.form__password {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+}
+
+.form__password .password-control {
+  background-size: contain;
+  width: 20px;
+  height: 14px;
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.form__password .hide {
+  background: url(img/show.jpg) no-repeat;
+}
+
+.form__password .show {
+  background: url(img/hide.jpg) no-repeat;
+}
+
 .form__element {
   margin-bottom: 30px;
 }

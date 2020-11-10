@@ -45,14 +45,15 @@ a:hover {
   font-size: 54px;
   line-height: 71px;
   letter-spacing: 0.03em;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 992px) {
   .main__title {
-    font-size: calc(20px + 34 * ((100vw - 320px) / (1280 - 320)));
+    font-size: calc(17px + 37 * ((100vw - 320px) / (1280 - 320)));
+    line-height: calc(20px + 51 * ((100vw - 320px) / (1280 - 320)));
     font-weight: 700;
-    margin: 0;
+    margin: 0 0 7px 0;
   }
 }
 
@@ -198,6 +199,10 @@ a:hover {
   background-blend-mode: lighten;
 }
 
+.form__newPassword {
+  display: none;
+}
+
 .form__password {
   position: relative;
   max-width: 480px;
@@ -235,7 +240,7 @@ a:hover {
   margin-left: 20px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .form__message .form__link-message {
     margin-left: 0px;
     margin-top: 10px;
@@ -285,7 +290,7 @@ a:hover {
 
 .form__text {
   max-width: 514px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.05em;

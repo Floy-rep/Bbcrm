@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet"> 
-    <link rel="shortcut icon" href="img/ico_bbcrm.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/ico_bbcrm.ico" type="image/x-icon">
     <title>Sign In</title>
 </head>
 
@@ -38,15 +38,18 @@
                 </div>
                 <div class="form__element">
                     <span>Пароль</span>
-                    <input type="password" placeholder="Your password" required> 
+                    <div class="form__password">
+                        <input type="password" id="first-password-input" placeholder="Введите пароль" name="password" required> 
+                        <a href="#" id="password-first-check" class="password-first-check password-control" onclick="return show_hide_password(this);"></a>
+                    </div>
                 </div>
                 <input class="form__submit" type="submit" value="Войти" title="Войти в систему">
             </form>
 
-            <a class="main__link main__new-account" href="">Создать аккаунт</a>
-            <a class="main__link main__new-pass" href="">Восстановить пароль</a>
+            <a class="main__link main__new-account" href="../SignUp/signup.html" title="Зарегистрировать новый аккаунт">Создать аккаунт</a>
+            <a class="main__link main__new-pass" href="../PasswordBackup/PasswordBackUp.html" title="Форма восстановления пароля">Восстановить пароль</a>
         </section>
     </main>    
-    
+    <script src="script.js"></script>
 </body>
 </html>

@@ -22,7 +22,6 @@ body {
 }
 
 .fixed-wrapper{
-	transition: all 0.3s;
 	background: #F7F7F7;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 	width: 100%;
@@ -51,12 +50,15 @@ body {
 		cursor: pointer;
 
 		.burger__menu{
+			transition: all 0.3s;
+			width: 0;
+		}
+
+		.burger__about{
 			display: none;
 		}
 
 		&__open{
-			transition: ease-in-out;
-
 			.header__img img{
 				position: none;
 			}
@@ -96,6 +98,7 @@ body {
 			}
 
 			.burger__menu{
+				transition: all 0.3s;
 				cursor: auto;
 				display: flex;
 				flex-direction: column;

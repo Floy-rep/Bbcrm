@@ -48,6 +48,8 @@ window.addEventListener('scroll', function() {
   } 
 });
 
+
+
 // SMOOTH SCROLL
 
 const anchors = document.querySelectorAll('a[href*="#"]')

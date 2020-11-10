@@ -23,8 +23,6 @@ body {
 }
 
 .fixed-wrapper {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   background: #F7F7F7;
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -57,12 +55,13 @@ body {
 }
 
 .header .burger .burger__menu {
-  display: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 0;
 }
 
-.header .burger__open {
-  -webkit-transition: ease-in-out;
-  transition: ease-in-out;
+.header .burger .burger__about {
+  display: none;
 }
 
 .header .burger__open .header__img img {
@@ -109,6 +108,8 @@ body {
 }
 
 .header .burger__open .burger__menu {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   cursor: auto;
   display: -webkit-box;
   display: -ms-flexbox;
