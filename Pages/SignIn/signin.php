@@ -31,10 +31,10 @@
         </section>
         <section class="main__block main__form">
             <h1 class="main__title">Вход в BBcrm</h1>
-            <form class="form" action="Post">
+            <form class="form" method="POST" action="../../php/checkpass.php">
                 <div class="form__element">
                     <span>Телефон</span>
-                    <input type="text" placeholder="+7 (904) 099-25-73" required> 
+                    <input type="text" placeholder="+7 (904) 099-25-73" name="phone" required> 
                 </div>
                 <div class="form__element">
                     <span>Пароль</span>
@@ -43,8 +43,25 @@
                         <a href="#" id="password-first-check" class="password-first-check password-control" onclick="return show_hide_password(this);"></a>
                     </div>
                 </div>
+                
+                <p id= "<?php
+                    session_start();
+                    echo $_SESSION['dinied'];
+                    session_reset();
+
+                    ?>" class="form__info">  Неверно введен логин или пароль*</p> 
+                
+                <p id= "<?php
+                    session_start();
+                    echo $_SESSION['accepted'];
+                    session_destroy();
+
+
+                    ?>" class="form__info">  Вы успешно зашли в учетную запись!*</p> 
+
                 <input class="form__submit" type="submit" value="Войти" title="Войти в систему">
             </form>
+            
 
             <a class="main__link main__new-account" href="../SignUp/signup.html" title="Зарегистрировать новый аккаунт">Создать аккаунт</a>
             <a class="main__link main__new-pass" href="../PasswordBackup/PasswordBackUp.html" title="Форма восстановления пароля">Восстановить пароль</a>

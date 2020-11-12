@@ -47,6 +47,7 @@ a{
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.05em;
+        color: #1F98E9;
         @media screen and (max-width:992px) {
             font-size: calc(13px + 3 * ((100vw - 320px) / (1280 - 320)));
             line-height: calc(13px + 3 * ((100vw - 320px) / (1280 - 320)));
@@ -56,8 +57,6 @@ a{
 
     &__link:hover{
         text-decoration-line: underline;
-        color: #1F98E9;
-        
     }
 
     &__new-account{
@@ -150,7 +149,22 @@ a{
     }
 }
 
+
+#form__badrequest{
+    display: block;
+    color: #E84545;
+}
+
+#form__goodrequest{
+    display: block;
+    color: #5fdf40;
+}
+
 .form{
+
+    &__info{
+        display: none;
+    }
 
     &__password{
         position: relative;
@@ -197,9 +211,6 @@ a{
             border-radius: 4px;
             padding: 0px 10px;
 
-            @media screen and (max-width:470px) {
-                width: 155px;
-            }
         }
     }
 
