@@ -1,3 +1,11 @@
+<?php
+session_start();
+$text = $_SESSION['text_message'];
+$text = "123123";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -16,7 +24,7 @@
             
             <div class="main__back">
                 <img src="img/arrow.png" alt="Not found">
-                <a href="../../index.html" title="Вернуться на главную страницу"> Вернуться на сайт</a>
+                <a href="../../index.php" title="Вернуться на главную страницу"> Вернуться на сайт</a>
             </div>
 
             <div class="text">
@@ -34,7 +42,8 @@
             <form class="form" action="Post">
                 <div class="form__element">
                     <span>Телефон</span>
-                    <input id="phone" name="phone" type="text" placeholder="+7 (904) 099-25-73" required> 
+                    <input id="phone" name="phone" type="text" placeholder="+79040992573"
+                    pattern="\+79[0-9]{9}|8[0-9]{10}" required> 
                 </div>
                 <div class="form__element">
                     <span>Пароль</span>
@@ -57,6 +66,22 @@
                         <a href="#" class="form__link-message" onclick="return send_message(this);">Отправить смс</a>
                     </div>
                 </div>
+
+                <?php
+                    if(!isset($text))
+                    {
+
+                    }
+                    else
+                    {
+                        echo"<div class= 'form__errormessage'> 
+                        <p> $text </p>
+                        </div>"
+                        
+                        ;
+                    }
+                ?>
+
                 <p class="form__text">
                     Регистрируясь, вы подтверждаете, что принимаете <a href="#">Пользовательское соглашение </a> и даете <a href="#">Согласие на обработку персональных данных.</a> 
                 </p>
@@ -66,9 +91,9 @@
 
             <div class="main__link-div">
                 <span>Уже есть аккаунт</span>
-                <a class="main__link main__new-account" href="../SignIn/signin.html" title="Войти в существующий аккаунт">Войти</a>
+                <a class="main__link main__new-account" href="../SignIn/signin.php" title="Войти в существующий аккаунт">Войти</a>
             </div>
-            <a class="main__link main__new-pass" href="../PasswordBackup/PasswordBackUp.html" title="Форма восстановления пароля">Восстановить пароль</a>
+            <a class="main__link main__new-pass" href="../PasswordBackup/PasswordBackUp.php" title="Форма восстановления пароля">Восстановить пароль</a>
         </section>
     </main>   
     

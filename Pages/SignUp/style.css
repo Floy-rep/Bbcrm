@@ -194,11 +194,21 @@ a:hover {
   background: url(img/bg.png) no-repeat;
   background-size: cover;
   background-position: top left;
-  background-color: rgba(6, 6, 48, 0.9);
   background-blend-mode: lighten;
 }
 
+.form {
+  display: none;
+}
+
+.form__errormessage {
+  display: block;
+  color: #E84545;
+  margin: 5px 0;
+}
+
 .form__password {
+  display: none;
   position: relative;
   max-width: 480px;
   width: 100%;

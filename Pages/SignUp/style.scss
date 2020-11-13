@@ -87,7 +87,6 @@ a:hover{
     }
 
     &__block:nth-child(1){
-
         .main__back{
             margin: 60px 50px 0 0;
             display: flex;
@@ -161,14 +160,22 @@ a:hover{
         background: url(img/bg.png) no-repeat;
         background-size: cover;
         background-position: top left;
-        background-color: rgba($color: #060630, $alpha: 0.9);
+        // background-color: rgba($color: #060630, $alpha: 0.9);
         background-blend-mode: lighten;
     }
 }
 
 .form{
+    display: none;
+
+    &__errormessage{
+        display: block;
+        color: #E84545;
+        margin: 5px 0;
+    }
 
     &__password{
+        display: none;
         position: relative;
         max-width: 480px;
         width: 100%;

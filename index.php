@@ -1,3 +1,60 @@
+<?php
+
+function get_ip(){
+    $client  = $_SERVER['HTTP_CLIENT_IP'];
+    $forward = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remote  = $_SERVER['REMOTE_ADDR'];
+
+    if(filter_var($client, FILTER_VALIDATE_IP)) $ip = $client;
+    elseif(filter_var($forward, FILTER_VALIDATE_IP)) $ip = $forward;
+    else $ip = $remote;
+
+    return $ip;
+}
+
+include_once 'php/database.php';
+// setcookie('phone', '7979040992573');
+
+if (empty($_SESSION['auth']) or $_SESSION['auth'] == false) {
+
+    // if ( !empty($_COOKIE['phone']) and !empty($_COOKIE['key']) ) {
+    if ( !empty($_COOKIE['phone'])) {
+
+        if ($dbconnect->connect_error) {    
+            die("Database connection failed: " . $dbconnect->connect_error);    // Проверка на подключение
+          }
+
+        // Полученме куки из БД
+
+        $query = 'SELECT * FROM Users WHERE Phone="'.$_COOKIE['phone'].'"'; // Получение телефона пользователя исходя из куки
+        $user = mysqli_fetch_assoc(mysqli_query($dbconnect, $query)); 
+
+        $salt = $user['Salt'];  //соль для куки
+        $Ip = get_ip(); //IP для куки
+
+        $login = $_COOKIE['phone'];
+        $coockie_key = md5($_COOKIE['coockie_key'].$Ip.$salt);
+
+        $query = 'SELECT * FROM Users WHERE Phone="'.$phone.'" AND Cookie="'.$coockie_key.'"'
+            or die (mysqli_error($dbconnect));
+        $result = mysqli_fetch_assoc(mysqli_query($dbconnect, $query)); 
+
+        if (!empty($result)) {
+            session_start(); 
+            $_SESSION['auth'] = true; 
+            $_SESSION['Phone'] = $user['Phone'];
+            header("Location: php/profile.php");
+        }
+            // $_SESSION['']
+    }
+}
+else if ($_SESSION['auth'] == true){
+    header("Location: php/profile.php");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -26,7 +83,7 @@
                     </div>
                     <div class="header__about">
                         <a class="header__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
-                        <form class="header__form" action="Pages/SignUp/signup.html">
+                        <form class="header__form" action="Pages/SignUp/signup.php">
                             <button type="submit" class="header__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
                         </form>
                         <a class="header__item" title="Войти в аккаунт" href="Pages/SignIn/signin.php">ВОЙТИ</a>
@@ -40,7 +97,7 @@
     
                                 <div class="burger__about">
                                     <a class="burger__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
-                                    <form action="Pages/SignUp/signup.html">
+                                    <form action="Pages/SignUp/signup.php">
                                         <button type="submit" class="burger__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
                                     </form>
                                     <a class="burger__item" title="Войти в аккаунт" href="Pages/SignIn/signin.php">ВОЙТИ</a>
@@ -61,7 +118,7 @@
                     <h1 class="header__title">Программа <br> для автомагазинов</h1>
                     <p class="header__subtitle">Помогает вести учет склада, увеличивает <br> продажи, экономит деньги и время</p>
 
-                    <form action="Pages/SignUp/signup.html">
+                    <form action="Pages/SignUp/signup.php">
                         <button class="header__button" title="Закажите прямо сейчас!">
                             <span>ПОЛУЧИТЬ БЕСПЛАТНО</span>    
                         </button>
@@ -203,7 +260,7 @@
                         Проверьте, подходит ли вам <span class="banner__span">BBcrm — получите 14 дней и помощь специалиста бесплатно</span>
                     </p>
 
-                    <form action="Pages/SignUp/signup.html">
+                    <form action="Pages/SignUp/signup.php">
                         <button class="banner__button"><span>Получить бесплатно</span></button>
                     </form>
 
@@ -253,7 +310,7 @@
             <div class="signup">
                 <h3>BBcrm готова к работе</h3>
                 <p>Проверьте, подходит ли вам <span>BBcrm — получите 14 дней и помощь специалиста бесплатно</span></p>
-                <button href="Pages/SignUp/signup.html"><span>РЕГИСТРАЦИЯ</span></button>
+                <button href="Pages/SignUp/signup.php"><span>РЕГИСТРАЦИЯ</span></button>
 
             </div>
         </div>
@@ -330,7 +387,7 @@
                         <img class="footer__img" src="img/footer_line.jpg" alt="Not Found">
                     </div>
 
-                    <form class="footer__form" action="Pages/SignUp/signup.html">
+                    <form class="footer__form" action="Pages/SignUp/signup.php">
                         <button class="footer__button"><span>РЕГИСТРАЦИЯ</span></button>
                     </form>
 

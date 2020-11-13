@@ -1,3 +1,36 @@
+<?php
+session_start();
+// print_r( $_COOKIE);
+if (!$_COOKIE['test']){
+    // setcookie('test', '123', time() + "3600");
+}
+    
+echo $_COOKIE['test'];
+
+//ОТПРАВКА СООБЩЕНИЙ
+
+// require_once '../../php/sms.ru.php';
+
+// $smsru = new SMSRU('12438D0A-5537-20D0-624C-CC7D59793651'); 
+// $data = new stdClass();
+// // $data->to = '79040992573';
+// // $data->to = '89202098077';
+// $data->text = 'DAROVA EPTA BANDIT'; 
+// $sms = $smsru->send_one($data);
+
+// if ($sms->status == "OK") { // Запрос выполнен успешно
+//     echo "Сообщение отправлено успешно. ";
+//     echo "ID сообщения: $sms->sms_id. ";
+//     echo "Ваш новый баланс: $sms->balance";
+// } else {
+//     echo "Сообщение не отправлено. ";
+//     echo "Код ошибки: $sms->status_code. ";
+//     echo "Текст ошибки: $sms->status_text.";
+// }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -16,7 +49,7 @@
             
             <div class="main__back">
                 <img src="img/arrow.png" alt="Not found">
-                <a href="../../index.html" title="Вернуться на главную страницу"> Вернуться на сайт</a>
+                <a href="../../index.php" title="Вернуться на главную страницу"> Вернуться на сайт</a>
             </div>
 
             <div class="text">
@@ -44,27 +77,16 @@
                     </div>
                 </div>
                 
-                <p id= "<?php
-                    session_start();
-                    echo $_SESSION['dinied'];
-                    session_reset();
-
-                    ?>" class="form__info">  Неверно введен логин или пароль*</p> 
+                <p id= "" class="form__info">  Неверно введен логин или пароль*</p> 
                 
-                <p id= "<?php
-                    session_start();
-                    echo $_SESSION['accepted'];
-                    session_destroy();
-
-
-                    ?>" class="form__info">  Вы успешно зашли в учетную запись!*</p> 
+                <p id= "" class="form__info">  Вы успешно зашли в учетную запись!*</p> 
 
                 <input class="form__submit" type="submit" value="Войти" title="Войти в систему">
             </form>
             
 
-            <a class="main__link main__new-account" href="../SignUp/signup.html" title="Зарегистрировать новый аккаунт">Создать аккаунт</a>
-            <a class="main__link main__new-pass" href="../PasswordBackup/PasswordBackUp.html" title="Форма восстановления пароля">Восстановить пароль</a>
+            <a class="main__link main__new-account" href="../SignUp/signup.php" title="Зарегистрировать новый аккаунт">Создать аккаунт</a>
+            <a class="main__link main__new-pass" href="../PasswordBackup/PasswordBackUp.php" title="Форма восстановления пароля">Восстановить пароль</a>
         </section>
     </main>    
     <script src="script.js"></script>
