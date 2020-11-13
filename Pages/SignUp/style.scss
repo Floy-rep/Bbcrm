@@ -36,13 +36,13 @@ a:hover{
     &__title{
         font-family: Roboto Slab;
         font-weight: 300;
-        font-size: 54px;
+        font-size: 50px;
         line-height: 71px;
         letter-spacing: 0.03em;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
 
         @media screen and (max-width:992px) {
-            font-size: calc(20px + 34 * ((100vw - 320px) / (1280 - 320)));
+            font-size: calc(20px + 30 * ((100vw - 320px) / (1280 - 320)));
             font-weight: 700;
             margin: 0;
         }
@@ -160,22 +160,20 @@ a:hover{
         background: url(img/bg.png) no-repeat;
         background-size: cover;
         background-position: top left;
-        // background-color: rgba($color: #060630, $alpha: 0.9);
+        background-color: rgba($color: #060630, $alpha: 0.9);
         background-blend-mode: lighten;
     }
 }
 
 .form{
-    display: none;
-
-    &__errormessage{
+    // display: none;
+    &__errormessage p{
         display: block;
         color: #E84545;
-        margin: 5px 0;
+        margin: 10px 0;
     }
 
     &__password{
-        display: none;
         position: relative;
         max-width: 480px;
         width: 100%;

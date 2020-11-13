@@ -1,8 +1,10 @@
 <?php
+include_once "../../php/onload.php";
+
+
 session_start();
 $text = $_SESSION['text_message'];
-$text = "123123";
-
+unset($_SESSION['text_message']);
 ?>
 
 
@@ -11,7 +13,7 @@ $text = "123123";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" href="../../img/ico_bbcrm.ico" type="image/x-icon">
@@ -39,11 +41,11 @@ $text = "123123";
         </section>
         <section class="main__block main__form">
             <h1 class="main__title">Регистрация</h1>
-            <form class="form" action="Post">
+            <form class="form" method="POST" action="./checkreg.php">
                 <div class="form__element">
                     <span>Телефон</span>
                     <input id="phone" name="phone" type="text" placeholder="+79040992573"
-                    pattern="\+79[0-9]{9}|8[0-9]{10}" required> 
+                    pattern="\+79[0-9]{9}|8[0-9]{10}|79[0-9]{9}" required> 
                 </div>
                 <div class="form__element">
                     <span>Пароль</span>
@@ -55,7 +57,7 @@ $text = "123123";
                 <div class="form__element">
                     <span>Потверждение пароля</span>
                     <div class="form__password">
-                        <input type="password" id="second-password-input" placeholder="Потвердите пароль" name="password" required> 
+                        <input type="password" id="second-password-input" placeholder="Потвердите пароль" name="password_confirm" required> 
                         <a href="#" id="password-second-check" class="password-second-check password-control" onclick="return show_hide_password(this);"></a>
                     </div>
                 </div>
@@ -68,17 +70,11 @@ $text = "123123";
                 </div>
 
                 <?php
-                    if(!isset($text))
-                    {
-
-                    }
-                    else
+                    if(isset($text))
                     {
                         echo"<div class= 'form__errormessage'> 
                         <p> $text </p>
-                        </div>"
-                        
-                        ;
+                        </div>";
                     }
                 ?>
 
