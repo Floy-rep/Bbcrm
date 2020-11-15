@@ -1,11 +1,10 @@
 <?php
+include_once "../../php/onload.php";
+checkAuth("../../php/database.php", "../../php/profile.php");
+
 session_start();
-// print_r( $_COOKIE);
-if (!$_COOKIE['test']){
-    // setcookie('test', '123', time() + "3600");
-}
-    
-echo $_COOKIE['test'];
+$text = $_SESSION['text_message'];
+unset($_SESSION['text_message']);
 
 //ОТПРАВКА СООБЩЕНИЙ
 
@@ -13,7 +12,7 @@ echo $_COOKIE['test'];
 
 // $smsru = new SMSRU('12438D0A-5537-20D0-624C-CC7D59793651'); 
 // $data = new stdClass();
-// // $data->to = '79040992573';
+// $data->to = '79040992573';
 // // $data->to = '89202098077';
 // $data->text = 'DAROVA EPTA BANDIT'; 
 // $sms = $smsru->send_one($data);
@@ -73,14 +72,19 @@ echo $_COOKIE['test'];
                     <span>Пароль</span>
                     <div class="form__password">
                         <input type="password" id="first-password-input" placeholder="Введите пароль" name="password" required> 
-                        <a href="#" id="password-first-check" class="password-first-check password-control" onclick="return show_hide_password(this);"></a>
+                        <!-- <a href="#" id="password-first-check" class="password-first-check password-control hide" onclick="return show_hide_password(this);"></a> -->
+                        <a href="#" id="password-first-check" class="password-first-check password-control hide" onclick="<?php echo "lol"; ?>"></a>
                     </div>
                 </div>
-                
-                <p id= "" class="form__info">  Неверно введен логин или пароль*</p> 
-                
-                <p id= "" class="form__info">  Вы успешно зашли в учетную запись!*</p> 
 
+                <?php
+                    if(isset($text))
+                    {
+                        echo"<div class= 'form__errormessage'> 
+                        <p> $text </p>
+                        </div>";
+                    }
+                ?>
                 <input class="form__submit" type="submit" value="Войти" title="Войти в систему">
             </form>
             

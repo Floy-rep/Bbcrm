@@ -12,40 +12,48 @@ function get_ip(){
     return $ip;
 }
 
-include_once 'php/database.php';
 
-if (empty($_SESSION['auth']) or $_SESSION['auth'] == false) {
-    if ( !empty($_COOKIE['phone']) and !empty($_COOKIE['coockie_key']) ) {
-        if ($dbconnect->connect_error) {    
-            die("Database connection failed: " . $dbconnect->connect_error);    // Проверка на подключение
-          }
+function checkAuth($linkdb, $linkprofile)
+{
+    include_once $linkdb;
 
-        // Полученме куки из БД
+    if (empty($_SESSION['auth']) or $_SESSION['auth'] == false) {
+        if ( !empty($_COOKIE['phone']) and !empty($_COOKIE['cookie_key']) ) {
 
-        $query = 'SELECT * FROM Users WHERE Phone="'.$_COOKIE['phone'].'"'; // Получение телефона пользователя исходя из куки
-        $user = mysqli_fetch_assoc(mysqli_query($dbconnect, $query)); 
+            if ($dbconnect->connect_error) {    
+                die("Database connection failed: " . $dbconnect->connect_error);    // Проверка на подключение
+              }
 
-        $salt = $user['Salt'];  //соль для куки
-        $Ip = get_ip(); //IP для куки
+            // Полученме куки из БД
 
-        $phone = $_COOKIE['phone'];
-        $coockie_key = md5($_COOKIE['coockie_key'].$Ip.$salt);
+            $query = 'SELECT * FROM Users WHERE Phone="'.$_COOKIE['phone'].'"'; // Получение телефона пользователя исходя из куки
+            $user = mysqli_fetch_assoc(mysqli_query($dbconnect, $query)); 
 
-        $query = 'SELECT * FROM Users WHERE Phone="'.$phone.'" AND Cookie="'.$coockie_key.'"'
-            or die (mysqli_error($dbconnect));
-        $result = mysqli_fetch_assoc(mysqli_query($dbconnect, $query)); 
+            $salt = $user['Salt'];  //соль для куки
+            $Ip = get_ip(); //IP для куки
 
-        if (!empty($result)) {
-            session_start(); 
-            $_SESSION['auth'] = true; 
-            $_SESSION['Phone'] = $user['Phone'];
-            header("Location: php/profile.php");
+            $phone = $_COOKIE['phone'];
+            $coockie_key = md5($_COOKIE['cookie_key'].$Ip.$salt);
+
+            $query = 'SELECT * FROM Users WHERE Phone="'.$phone.'" AND Cookie="'.$coockie_key.'"'
+                or die (mysqli_error($dbconnect));
+            $result = mysqli_fetch_assoc(mysqli_query($dbconnect, $query)); 
+
+            if (!empty($result)) {
+                session_start(); 
+                $_SESSION['auth'] = true; 
+                $_SESSION['Phone'] = $user['Phone'];
+                header("Location: ". $linkprofile);
+            }
+                // $_SESSION['']
         }
-            // $_SESSION['']
+    }
+    else if ($_SESSION['auth'] == true){
+        header("Location: ". $linkprofile);
+        // header("Location: php/profile.php");
     }
 }
-else if ($_SESSION['auth'] == true){
-    header("Location: php/profile.php");
-}
+
+
 
 ?>

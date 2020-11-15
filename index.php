@@ -1,7 +1,7 @@
 <?php
 
 include_once "php/onload.php";
-
+checkAuth("php/database.php", "php/profile.php");
 ?>
 
 

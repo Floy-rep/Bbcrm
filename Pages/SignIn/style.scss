@@ -149,18 +149,16 @@ a{
     }
 }
 
-
-#form__badrequest{
-    display: block;
-    color: #E84545;
-}
-
-#form__goodrequest{
-    display: block;
-    color: #5fdf40;
-}
-
 .form{
+
+    &__errormessage{
+        display: block;
+        margin: 10px 0;
+        p{
+            color: #E84545;
+            // color: green;
+        }
+    }
 
     &__info{
         display: none;

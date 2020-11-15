@@ -178,14 +178,13 @@ a {
   background-blend-mode: lighten;
 }
 
-#form__badrequest {
+.form__errormessage {
   display: block;
-  color: #E84545;
+  margin: 10px 0;
 }
 
-#form__goodrequest {
-  display: block;
-  color: #5fdf40;
+.form__errormessage p {
+  color: #E84545;
 }
 
 .form__info {

@@ -19,41 +19,41 @@ function show_hide_password(target){
       return false;
   }
 
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    var checkbox1 = document.getElementById("password-first-check");
-    checkbox1.classList.add("hide");
-  } else {
+//   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+//     var checkbox1 = document.getElementById("password-first-check");
+//     checkbox1.classList.add("hide");
+//   } else {
 
-    let first_input_form = document.getElementById("first-password-input");
-    first_input_form.addEventListener('input', function() {
-        var checkbox = document.getElementById("password-first-check");
-        if (first_input_form.textLength > 0){
-            if (first_input_form.getAttribute('type') == 'password')
-                checkbox.classList.add("hide");
-            else
-                checkbox.classList.add("show");
-        }
-        else{
-            checkbox.classList.remove("hide");
-            checkbox.classList.remove("show");
-        }
-      });
+//     let first_input_form = document.getElementById("first-password-input");
+//     first_input_form.addEventListener('input', function() {
+//         var checkbox = document.getElementById("password-first-check");
+//         if (first_input_form.textLength > 0){
+//             if (first_input_form.getAttribute('type') == 'password')
+//                 checkbox.classList.add("hide");
+//             else
+//                 checkbox.classList.add("show");
+//         }
+//         else{
+//             checkbox.classList.remove("hide");
+//             checkbox.classList.remove("show");
+//         }
+//       });
   
-}
+// }
   
-  let first_input_form = document.getElementById("first-password-input");
+//   let first_input_form = document.getElementById("first-password-input");
   
-  first_input_form.addEventListener('input', function() {
-      var checkbox = document.getElementById("password-first-check");
-      if (first_input_form.textLength > 0){
-          if (first_input_form.getAttribute('type') == 'password')
-              checkbox.classList.add("hide");
-          else
-              checkbox.classList.add("show");
-      }
-      else{
-          checkbox.classList.remove("hide");
-          checkbox.classList.remove("show");
-      }
-    });
+//   first_input_form.addEventListener('input', function() {
+//       var checkbox = document.getElementById("password-first-check");
+//       if (first_input_form.textLength > 0){
+//           if (first_input_form.getAttribute('type') == 'password')
+//               checkbox.classList.add("hide");
+//           else
+//               checkbox.classList.add("show");
+//       }
+//       else{
+//           checkbox.classList.remove("hide");
+//           checkbox.classList.remove("show");
+//       }
+//     });
 

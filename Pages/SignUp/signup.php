@@ -1,6 +1,6 @@
 <?php
 include_once "../../php/onload.php";
-
+checkAuth("../../php/database.php", "../../php/profile.php");
 
 session_start();
 $text = $_SESSION['text_message'];
@@ -41,7 +41,7 @@ unset($_SESSION['text_message']);
         </section>
         <section class="main__block main__form">
             <h1 class="main__title">Регистрация</h1>
-            <form class="form" method="POST" action="./checkreg.php">
+            <form class="form" method="POST" action="../../php/checkreg.php">
                 <div class="form__element">
                     <span>Телефон</span>
                     <input id="phone" name="phone" type="text" placeholder="+79040992573"
@@ -51,14 +51,14 @@ unset($_SESSION['text_message']);
                     <span>Пароль</span>
                     <div class="form__password">
                         <input type="password" id="first-password-input" placeholder="Введите пароль" name="password" required> 
-                        <a href="#" id="password-first-check" class="password-first-check password-control" onclick="return show_hide_password(this);"></a>
+                        <a href="#" id="password-first-check" class="password-first-check password-control " onclick="return show_hide_password(this);"></a>
                     </div>
                 </div>
                 <div class="form__element">
                     <span>Потверждение пароля</span>
                     <div class="form__password">
                         <input type="password" id="second-password-input" placeholder="Потвердите пароль" name="password_confirm" required> 
-                        <a href="#" id="password-second-check" class="password-second-check password-control" onclick="return show_hide_password(this);"></a>
+                        <a href="#" id="password-second-check" class="password-second-check password-control " onclick="return show_hide_password(this);"></a>
                     </div>
                 </div>
                 <div class="form__element">
