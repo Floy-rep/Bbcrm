@@ -50,13 +50,5 @@ second_input_form.addEventListener('input', function() {
     }
     });
 
-function send_message(target){
-    let phone = document.getElementById("phone");
-    console.log(phone.value.length);
-    console.log(phone);
-    if (phone.value.length > 0){
-        target.text = "Повторно отправить смс";
-        // Функция для отправки телефона
-    }
-}
+
   

@@ -5,9 +5,7 @@ checkAuth("../../php/database.php", "../../php/profile.php", "none");
 session_start();
 $text = $_SESSION['text_message'];
 unset($_SESSION['text_message']);
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -18,7 +16,7 @@ unset($_SESSION['text_message']);
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" href="../../img/ico_bbcrm.ico" type="image/x-icon">
-    <title>Sign In</title>
+    <title>Password BackUp</title>
 </head>
 
 <body>
@@ -40,20 +38,14 @@ unset($_SESSION['text_message']);
                 </p>
             </div>
         </section>
+
         <section class="main__block main__form">
-            <h1 class="main__title">Вход в BBcrm</h1>
-            <form class="form" method="POST" action="../../php/checkpass.php">
+            <h1 class="main__title">Восстановление пароля</h1>
+            <form class="form" method="POST" action="../../php/changepass_stage1.php" name="form">
                 <div class="form__element">
                     <span>Телефон</span>
                     <input id="phone" name="phone" type="text" placeholder="+79040992573"
-                    pattern="\+79[0-9]{9}|8[0-9]{10}|79[0-9]{9}" required> 
-                </div>
-                <div class="form__element">
-                    <span>Пароль</span>
-                    <div class="form__password">
-                        <input type="password" id="first-password-input" placeholder="Введите пароль" name="password" required> 
-                        <a href="#" id="password-first-check" class="password-first-check password-control " onclick="return show_hide_password(this);"></a>
-                    </div>
+                    pattern="\+79[0-9]{9}|8[0-9]{10}|79[0-9]{9}" required>
                 </div>
 
                 <?php
@@ -64,14 +56,18 @@ unset($_SESSION['text_message']);
                         </div>";
                     }
                 ?>
-                <input class="form__submit" type="submit" value="Войти" title="Войти в систему">
-            </form>
-            
 
-            <a class="main__link main__new-account" href="../SignUp/signup_data.php" title="Зарегистрировать новый аккаунт">Создать аккаунт</a>
-            <a class="main__link main__new-pass" href="../PasswordBackup/PasswordBackUp.php" title="Форма восстановления пароля">Восстановить пароль</a>
+                <input class="form__submit" type="submit" value="Сменить пароль" title="Изменить пароль для вашей учетной записи" name="submit"> 
+            </form>
+            <div class="main__link-div">
+                <span>Вспомнили пароль?</span>
+                <a class="main__link main__new-account" href="../SignIn/signin.php" title="Войти в существующий аккаунт">Войти</a>
+            </div>
+            <a class="main__link main__new-pass" href="../SignUp/signup_data.php" title="Создать новый аккаунт">Зарегистрироваться</a>
         </section>
-    </main>    
+    </main>   
+    
     <script src="script.js"></script>
+    
 </body>
 </html>

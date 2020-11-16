@@ -2,16 +2,16 @@
 
 //LOCAL MACHINE WINDOWS
 
-$hostname = "localhost";
-$username = "root";
-$password = "root";
-$db = "test";
-
-//LOCAL MACHINE LINUX
 // $hostname = "localhost";
-// $username = "floy";
-// $password = "floy2310";
+// $username = "root";
+// $password = "root";
 // $db = "test";
+
+// LOCAL MACHINE LINUX
+$hostname = "localhost";
+$username = "floy";
+$password = "floy2310";
+$db = "test";
 
 //WEBHOST000
 // $hostname = "localhost";

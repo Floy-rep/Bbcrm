@@ -199,6 +199,15 @@ a:hover {
   background-blend-mode: lighten;
 }
 
+.form__errormessage {
+  display: block;
+  margin: 10px 0;
+}
+
+.form__errormessage p {
+  color: #E84545;
+}
+
 .form__newPassword {
   display: none;
 }

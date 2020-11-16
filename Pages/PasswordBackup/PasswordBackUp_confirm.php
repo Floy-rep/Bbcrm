@@ -1,3 +1,12 @@
+<?php
+include_once "../../php/onload.php";
+checkAuth("../../php/database.php", "../../php/profile.php", "none");
+
+session_start();
+$text = $_SESSION['text_message'];
+unset($_SESSION['text_message']);
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -16,7 +25,7 @@
             
             <div class="main__back">
                 <img src="img/arrow.png" alt="Not found">
-                <a href="../../index.php" title="Вернуться на главную страницу"> Вернуться на сайт</a>
+                <a href="./PasswordBackUp.php" title="Изменить телефон"> Назад</a>
             </div>
 
             <div class="text">
@@ -32,34 +41,38 @@
 
         <section class="main__block main__form">
             <h1 class="main__title">Восстановление пароля</h1>
-            <form class="form" action="Post">
-                <div class="form__element">
-                    <span>Телефон</span>
-                    <input id="phone" name="phone" type="text" placeholder="+7 (904) 099-25-73" required> 
-                </div>
+            <form class="form" method="POST" action="../../php/changepass_stage2.php" name="form">
                 
                 <div class="form__element">
                     <span>Код смс</span>
                     <div class="form__message">
-                        <input type="text" id="pass-from-message" class="message-input" placeholder="Код" name="message" required maxlength="6"> 
-                        <a href="#" class="form__link-message" onclick="return send_message(this);">Отправить смс</a>
+                        <input type="text" id="pass-from-message" class="message-input" placeholder="Код" name="message" required maxlength="7"> 
                     </div>
                 </div>
 
-                <div id="firstpass" class="form__element form__newPassword">
+                <div class="form__element">
                     <span>Пароль</span>
                     <div class="form__password">
                         <input type="password" id="first-password-input" placeholder="Введите пароль" name="password" required> 
-                        <a href="#" id="password-first-check" class="password-first-check password-control hide" onclick="return show_hide_password(this);"></a>
+                        <a href="#" id="password-first-check" class="password-first-check password-control " onclick="return show_hide_password(this);"></a>
                     </div>
                 </div>
-                <div id="secondpass" class="form__element form__newPassword">
+                <div class="form__element">
                     <span>Потверждение пароля</span>
                     <div class="form__password">
-                        <input type="password" id="second-password-input" placeholder="Потвердите пароль" name="password" required> 
-                        <a href="#" id="password-second-check" class="password-second-check password-control hide" onclick="return show_hide_password(this);"></a>
+                        <input type="password" id="second-password-input" placeholder="Потвердите пароль" name="password_confirm" required> 
+                        <a href="#" id="password-second-check" class="password-second-check password-control " onclick="return show_hide_password(this);"></a>
                     </div>
                 </div>
+
+                <?php
+                    if(isset($text))
+                    {
+                        echo"<div class= 'form__errormessage'> 
+                        <p> $text </p>
+                        </div>";
+                    }
+                ?>
 
                 <input class="form__submit" type="submit" value="Сменить пароль" title="Изменить пароль для вашей учетной записи" name="submit"> 
             </form>
@@ -67,7 +80,7 @@
                 <span>Вспомнили пароль?</span>
                 <a class="main__link main__new-account" href="../SignIn/signin.php" title="Войти в существующий аккаунт">Войти</a>
             </div>
-            <a class="main__link main__new-pass" href="../SignUp/signup.php" title="Создать новый аккаунт">Зарегистрироваться</a>
+            <a class="main__link main__new-pass" href="../SignUp/signup_data.php" title="Создать новый аккаунт">Зарегистрироваться</a>
         </section>
     </main>   
     

@@ -4,7 +4,7 @@ function generateSalt($len)
 {
     $salt = '';
     for($i=0; $i<$len; $i++) {
-        $salt .= chr(mt_rand(33,126)); //символ из ASCII-table
+        $salt .= chr(mt_rand(48,90)); //символ из ASCII-table
     }
     return $salt;
 }

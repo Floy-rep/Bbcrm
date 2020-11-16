@@ -13,12 +13,18 @@ function get_ip(){
 }
 
 
-function checkAuth($linkdb, $linkprofile)
+function checkAuth($linkdb, $linkprofile, $linksignin)
 {
     include_once $linkdb;
 
+    $phone_cookie = $_COOKIE['phone']; 
+        if ($phone_cookie[0] == "+")
+            $phone_cookie = mb_strimwidth($phone_cookie, 2, 10);
+        else if ($phone_cookie[0] == "7" || $phone_cookie[0] == "8")
+            $phone_cookie = mb_strimwidth($phone_cookie, 1, 10);
+
     if (empty($_SESSION['auth']) or $_SESSION['auth'] == false) {
-        if ( !empty($_COOKIE['phone']) and !empty($_COOKIE['cookie_key']) ) {
+        if ( !empty($phone_cookie) and !empty($_COOKIE['cookie_key']) ) {
 
             if ($dbconnect->connect_error) {    
                 die("Database connection failed: " . $dbconnect->connect_error);    // Проверка на подключение
@@ -26,13 +32,12 @@ function checkAuth($linkdb, $linkprofile)
 
             // Полученме куки из БД
 
-            $query = 'SELECT * FROM Users WHERE Phone="'.$_COOKIE['phone'].'"'; // Получение телефона пользователя исходя из куки
+            $query = 'SELECT * FROM Users WHERE Phone="'.$phone_cookie.'"'; // Получение телефона пользователя исходя из куки
             $user = mysqli_fetch_assoc(mysqli_query($dbconnect, $query)); 
-
             $salt = $user['Salt'];  //соль для куки
             $Ip = get_ip(); //IP для куки
 
-            $phone = $_COOKIE['phone'];
+            $phone = $phone_cookie;
             $coockie_key = md5($_COOKIE['cookie_key'].$Ip.$salt);
 
             $query = 'SELECT * FROM Users WHERE Phone="'.$phone.'" AND Cookie="'.$coockie_key.'"'
@@ -47,8 +52,12 @@ function checkAuth($linkdb, $linkprofile)
             }
                 // $_SESSION['']
         }
+        else{
+            if ($linksignin != "none")
+                header("Location: ". $linksignin);
+        }
     }
-    else if ($_SESSION['auth'] == true){
+    else if ($_SESSION['auth'] == true || $_SESSION['auth'] == 1){
         header("Location: ". $linkprofile);
         // header("Location: php/profile.php");
     }

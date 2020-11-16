@@ -1,7 +1,6 @@
 <?php
-
 include_once "php/onload.php";
-checkAuth("php/database.php", "php/profile.php");
+checkAuth("php/database.php", "php/profile.php", "none");
 ?>
 
 
@@ -33,7 +32,7 @@ checkAuth("php/database.php", "php/profile.php");
                     </div>
                     <div class="header__about">
                         <a class="header__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
-                        <form class="header__form" action="Pages/SignUp/signup.php">
+                        <form class="header__form" action="Pages/SignUp/signup_data.php">
                             <button type="submit" class="header__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
                         </form>
                         <a class="header__item" title="Войти в аккаунт" href="Pages/SignIn/signin.php">ВОЙТИ</a>
@@ -47,7 +46,7 @@ checkAuth("php/database.php", "php/profile.php");
     
                                 <div class="burger__about">
                                     <a class="burger__item" title="Позвони нам, оператор всегда на связи" href="tel:88005002138">8 800 500-21-38</a>
-                                    <form action="Pages/SignUp/signup.php">
+                                    <form action="Pages/SignUp/signup_data.php">
                                         <button type="submit" class="burger__about-button" title="Пройти быструю регистрацию">РЕГИСТРАЦИЯ</button>
                                     </form>
                                     <a class="burger__item" title="Войти в аккаунт" href="Pages/SignIn/signin.php">ВОЙТИ</a>
@@ -68,7 +67,7 @@ checkAuth("php/database.php", "php/profile.php");
                     <h1 class="header__title">Программа <br> для автомагазинов</h1>
                     <p class="header__subtitle">Помогает вести учет склада, увеличивает <br> продажи, экономит деньги и время</p>
 
-                    <form action="Pages/SignUp/signup.php">
+                    <form action="Pages/SignUp/signup_data.php">
                         <button class="header__button" title="Закажите прямо сейчас!">
                             <span>ПОЛУЧИТЬ БЕСПЛАТНО</span>    
                         </button>
@@ -210,7 +209,7 @@ checkAuth("php/database.php", "php/profile.php");
                         Проверьте, подходит ли вам <span class="banner__span">BBcrm — получите 14 дней и помощь специалиста бесплатно</span>
                     </p>
 
-                    <form action="Pages/SignUp/signup.php">
+                    <form action="Pages/SignUp/signup_data.php">
                         <button class="banner__button"><span>Получить бесплатно</span></button>
                     </form>
 
@@ -260,7 +259,7 @@ checkAuth("php/database.php", "php/profile.php");
             <div class="signup">
                 <h3>BBcrm готова к работе</h3>
                 <p>Проверьте, подходит ли вам <span>BBcrm — получите 14 дней и помощь специалиста бесплатно</span></p>
-                <button href="Pages/SignUp/signup.php"><span>РЕГИСТРАЦИЯ</span></button>
+                <button href="Pages/SignUp/signup_data.php"><span>РЕГИСТРАЦИЯ</span></button>
 
             </div>
         </div>
@@ -337,7 +336,7 @@ checkAuth("php/database.php", "php/profile.php");
                         <img class="footer__img" src="img/footer_line.jpg" alt="Not Found">
                     </div>
 
-                    <form class="footer__form" action="Pages/SignUp/signup.php">
+                    <form class="footer__form" action="Pages/SignUp/signup_data.php">
                         <button class="footer__button"><span>РЕГИСТРАЦИЯ</span></button>
                     </form>
 

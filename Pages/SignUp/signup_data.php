@@ -1,10 +1,11 @@
 <?php
 include_once "../../php/onload.php";
-checkAuth("../../php/database.php", "../../php/profile.php");
+checkAuth("../../php/database.php", "../../php/profile.php", "none");
 
 session_start();
 $text = $_SESSION['text_message'];
 unset($_SESSION['text_message']);
+
 ?>
 
 
@@ -41,7 +42,7 @@ unset($_SESSION['text_message']);
         </section>
         <section class="main__block main__form">
             <h1 class="main__title">Регистрация</h1>
-            <form class="form" method="POST" action="../../php/checkreg.php">
+            <form class="form" method="POST" action="../../php/checkreg_stage1.php" name="form">
                 <div class="form__element">
                     <span>Телефон</span>
                     <input id="phone" name="phone" type="text" placeholder="+79040992573"
@@ -59,13 +60,6 @@ unset($_SESSION['text_message']);
                     <div class="form__password">
                         <input type="password" id="second-password-input" placeholder="Потвердите пароль" name="password_confirm" required> 
                         <a href="#" id="password-second-check" class="password-second-check password-control " onclick="return show_hide_password(this);"></a>
-                    </div>
-                </div>
-                <div class="form__element">
-                    <span>Код смс</span>
-                    <div class="form__message">
-                        <input type="text" id="pass-from-message" class="message-input" placeholder="Код" name="message" required maxlength="6"> 
-                        <a href="#" class="form__link-message" onclick="return send_message(this);">Отправить смс</a>
                     </div>
                 </div>
 
@@ -86,7 +80,7 @@ unset($_SESSION['text_message']);
             </form>
 
             <div class="main__link-div">
-                <span>Уже есть аккаунт</span>
+                <span>Уже есть аккаунт?</span>
                 <a class="main__link main__new-account" href="../SignIn/signin.php" title="Войти в существующий аккаунт">Войти</a>
             </div>
             <a class="main__link main__new-pass" href="../PasswordBackup/PasswordBackUp.php" title="Форма восстановления пароля">Восстановить пароль</a>

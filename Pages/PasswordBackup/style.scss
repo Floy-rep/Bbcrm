@@ -169,6 +169,14 @@ a:hover{
 
 .form{
 
+    &__errormessage{
+        display: block;
+        margin: 10px 0;
+        p{
+            color: #E84545;
+        }
+    }
+
     &__newPassword{
         display: none;
     }

@@ -197,6 +197,20 @@ a:hover {
   background-blend-mode: lighten;
 }
 
+.phone_form__submit {
+  max-width: 120px !important;
+  padding: 0 !important;
+  font-size: 16px;
+  color: #1F98E9;
+  cursor: pointer;
+  background: none;
+  border: none !important;
+}
+
+.phone_form__submit:hover {
+  text-decoration: underline;
+}
+
 .form__errormessage p {
   display: block;
   color: #E84545;
@@ -247,6 +261,10 @@ a:hover {
     display: block;
     font-size: calc(12px + 6 * ((100vw - 320px) / (1280 - 320)));
   }
+}
+
+.form__input {
+  background-color: #fff5be;
 }
 
 .form__element {

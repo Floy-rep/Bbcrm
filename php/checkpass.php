@@ -32,9 +32,9 @@ if (!empty($user)){
         $_SESSION['Phone'] = $phone;
 
         $query = 'UPDATE Users SET Cookie="'.$saltedCookie.'" WHERE Id="'.$user['Id'] .'"';
-        mysqli_query($dbconnect, $query) or header("Location: ./signin.php");
+        mysqli_query($dbconnect, $query);
 
-        header("Location: ../../php/profile.php");
+        header("Location: ./profile.php");
     }
     else{
         $_SESSION['text_message'] = "Введен не правильный пароль*";
