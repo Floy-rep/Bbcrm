@@ -59,10 +59,6 @@ function checkAuth($linkdb, $linkprofile, $linksignin)
     }
     else if ($_SESSION['auth'] == true || $_SESSION['auth'] == 1){
         header("Location: ". $linkprofile);
-        // header("Location: php/profile.php");
     }
 }
-
-
-
 ?>

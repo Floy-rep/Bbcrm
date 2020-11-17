@@ -208,6 +208,12 @@ a:hover {
   color: #E84545;
 }
 
+@media screen and (max-width: 992px) {
+  .form__errormessage p {
+    font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+  }
+}
+
 .form__newPassword {
   display: none;
 }

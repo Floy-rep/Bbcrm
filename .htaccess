@@ -11,3 +11,5 @@
 <IfModule mod_expires.c>
 	ExpiresByType text/css
 </IfModule>
+
+Options -Indexes

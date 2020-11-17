@@ -739,7 +739,7 @@ body {
 		}
 
 		.banner__button {
-			width: 302px;
+			max-width: 302px;
 			height: 66px;
 			margin: 0 15px;
 			background: #1F98E9;
@@ -971,24 +971,28 @@ body {
 			font-weight: 700;
 		}
 		@media screen and (max-width:992px) {
-			margin-top: calc(0 + 30 * ((100vw - 320px) / (1280 - 320)));
+			margin-top: calc(0px + 30 * ((100vw - 320px) / (1280 - 320)));
 		}
 	}
+	form{
+		
+		button{
+			max-width: 233px;
+			height: 66px;
+			background: #1F98E9;
+			border-radius: 4px;
+			width: 100%;
+			span{
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 16px;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+				color: #FFFFFF;
+			}
+		}
+	}		
 
-	button{
-		width: 233px;
-		height: 66px;
-		background: #1F98E9;
-		border-radius: 4px;
-		span{
-			font-weight: 700;
-			font-size: 14px;
-			line-height: 16px;
-			letter-spacing: 0.06em;
-			text-transform: uppercase;
-			color: #FFFFFF;
-		}
-	}
 }
 
 .safe-wrapper{
@@ -1240,7 +1244,7 @@ body {
 	&__button{
 		background: #1F98E9;
 		border-radius: 4px;
-		width: 179px;
+		max-width: 179px;
 		height: 56px;
 		margin-right: 40px;
 		span{

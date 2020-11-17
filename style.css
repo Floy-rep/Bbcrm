@@ -922,7 +922,7 @@ body {
 }
 
 .banner__text .banner__button {
-  width: 302px;
+  max-width: 302px;
   height: 66px;
   margin: 0 15px;
   background: #1F98E9;
@@ -1194,18 +1194,19 @@ body {
 
 @media screen and (max-width: 992px) {
   .signup p {
-    margin-top: calc(0 + 30 * ((100vw - 320px) / (1280 - 320)));
+    margin-top: calc(0px + 30 * ((100vw - 320px) / (1280 - 320)));
   }
 }
 
-.signup button {
-  width: 233px;
+.signup form button {
+  max-width: 233px;
   height: 66px;
   background: #1F98E9;
   border-radius: 4px;
+  width: 100%;
 }
 
-.signup button span {
+.signup form button span {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -1548,7 +1549,7 @@ body {
 .footer__button {
   background: #1F98E9;
   border-radius: 4px;
-  width: 179px;
+  max-width: 179px;
   height: 56px;
   margin-right: 40px;
 }

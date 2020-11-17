@@ -186,6 +186,9 @@ a:hover{
         display: block;
         color: #E84545;
         margin: 10px 0;
+        @media screen and (max-width:992px) {
+            font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+        }
     }
 
     &__password{
@@ -247,7 +250,7 @@ a:hover{
             letter-spacing: 0.04em;
             display: block;
             @media screen and (max-width:992px) {
-                font-size: calc(13px + 3 * ((100vw - 320px) / (1280 - 320)));
+                font-size: calc(12px + 3 * ((100vw - 320px) / (1280 - 320)));
             }
         }
         input{

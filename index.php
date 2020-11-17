@@ -1,6 +1,6 @@
 <?php
 include_once "php/onload.php";
-checkAuth("php/database.php", "php/profile.php", "none");
+checkAuth("php/database.php", "Pages/Profile/profile.php", "none");
 ?>
 
 
@@ -259,7 +259,9 @@ checkAuth("php/database.php", "php/profile.php", "none");
             <div class="signup">
                 <h3>BBcrm готова к работе</h3>
                 <p>Проверьте, подходит ли вам <span>BBcrm — получите 14 дней и помощь специалиста бесплатно</span></p>
-                <button href="Pages/SignUp/signup_data.php"><span>РЕГИСТРАЦИЯ</span></button>
+                <form action="Pages/SignUp/signup_data.php">
+                    <button><span>РЕГИСТРАЦИЯ</span></button>
+                </form>
 
             </div>
         </div>

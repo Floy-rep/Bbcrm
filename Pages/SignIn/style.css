@@ -35,7 +35,7 @@ a {
 
 @media screen and (max-width: 992px) {
   .main__title {
-    font-size: calc(20px + 34 * ((100vw - 320px) / (1280 - 320)));
+    font-size: calc(18px + 36 * ((100vw - 320px) / (1280 - 320)));
     font-weight: 700;
     margin: 0;
   }
@@ -185,6 +185,12 @@ a {
 
 .form__errormessage p {
   color: #E84545;
+}
+
+@media screen and (max-width: 992px) {
+  .form__errormessage p {
+    font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+  }
 }
 
 .form__info {

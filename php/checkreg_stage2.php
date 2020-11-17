@@ -31,7 +31,7 @@
             Password="'.$saltedPassword.'", Salt="'.$salt.'", Cookie="'.$saltedCookie.'"';
         mysqli_query($dbconnect, $query) or header("Location: ../Pages/SignUp/signup_data.php");
         
-        header("Location: ./profile.php");
+        header("Location: ../Pages/Profile/profile.php");
 
     }
     else{

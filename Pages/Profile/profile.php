@@ -55,21 +55,27 @@ if (empty($_SESSION['auth']) or $_SESSION['auth'] == false) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <title>Профиль</title>
 </head>
 <body>
-    <p>HELLO, <?php 
-    echo $user_phone. "<br>";
- 	echo $_SERVER['REMOTE_ADDR'];
-    ?></p>
+    <div class="content-wrapper">
+        <p>HELLO, <?php 
+            echo $user_phone. "<br>";
+            echo $_SERVER['REMOTE_ADDR'];?>
+        </p>
 
-    <div class="logout">
-    	<a href="./logout.php" class="logout__link"> Выйти из аккаунта </a>
+        <div class="logout">
+            <a href="../../php/logout.php" class="logout__link"> Выйти из аккаунта </a>
+        </div>	
+    </div>
+    
 
-    </div>	
+
 </body>
 </html>

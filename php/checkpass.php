@@ -34,7 +34,7 @@ if (!empty($user)){
         $query = 'UPDATE Users SET Cookie="'.$saltedCookie.'" WHERE Id="'.$user['Id'] .'"';
         mysqli_query($dbconnect, $query);
 
-        header("Location: ./profile.php");
+        header("Location: ../Pages/Profile/profile.php");
     }
     else{
         $_SESSION['text_message'] = "Введен не правильный пароль*";

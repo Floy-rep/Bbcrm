@@ -1,6 +1,6 @@
 <?php
 include_once "../../php/onload.php";
-checkAuth("../../php/database.php", "../../php/profile.php", "none");
+checkAuth("../../php/database.php", "../Profile/profile.php", "none");
 
 session_start();
 $text = $_SESSION['text_message'];
